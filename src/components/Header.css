@@ -1,0 +1,133 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all var(--transition-normal);
+}
+
+.header-top {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: 0.6rem 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.header-top-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.phone-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+}
+
+.phone-link:hover {
+  color: #bfdbfe;
+}
+
+.header-main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo-text-primary { 
+  color: var(--primary); 
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 2px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.get-quote-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+.mobile-menu-btn {
+  display: none;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  .header-main-content {
+    height: 70px;
+  }
+  
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    clip-path: circle(0% at 100% 0);
+    transition: clip-path 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  
+  .nav-open {
+    clip-path: circle(150% at 100% 0);
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+}

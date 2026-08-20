@@ -1,0 +1,109 @@
+﻿.quote-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(7, 21, 38, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+  animation: modalFadeIn 0.3s ease;
+}
+
+.quote-modal-content {
+  background: white;
+  width: 100%;
+  max-width: 550px;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+  animation: modalSlideUp 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.quote-modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-modal-close:hover {
+  color: var(--accent);
+}
+
+.quote-modal-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.quote-modal-header h2 {
+  color: var(--primary-dark);
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.quote-modal-header p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.quote-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+.quote-form .btn-primary {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.quote-success-message {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.quote-success-message .success-icon {
+  color: #25D366;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.quote-success-message h3 {
+  color: var(--primary-dark);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.quote-success-message p {
+  color: var(--text-secondary);
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalSlideUp {
+  from { opacity: 0; transform: translateY(30px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 600px) {
+  .quote-modal-content {
+    padding: 2rem 1.5rem;
+  }
+  .quote-form .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
