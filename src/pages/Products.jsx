@@ -74,7 +74,7 @@ const chillerProducts = [
   {
     id: 4,
     name: "10 TR Water Chiller (RO Water Cooling)",
-    category: "Specialty",
+    category: "RO Water Cooling",
     description: "High-capacity 10 TR water chiller designed for intensive RO water cooling applications.",
     features: ["Ideal for RO Water Cooling", "High Capacity", "Continuous Operation", "Reliable Performance"],
     tempRange: "5°C to 25°C",
@@ -85,7 +85,7 @@ const chillerProducts = [
   {
     id: 5,
     name: "3 TR Water Chiller (Outdoor Unit)",
-    category: "Specialty",
+    category: "RO Water Cooling",
     description: "3 TR water chiller designed in an outdoor unit specifically for RO water cooling applications.",
     features: ["Outdoor Unit Design", "Ideal for RO Water Cooling", "Weather Resistant", "High Efficiency Cooling"],
     tempRange: "5°C to 25°C",
@@ -107,7 +107,7 @@ const chillerProducts = [
   {
     id: 7,
     name: "2 TR Water Chiller (RO Water Cooling)",
-    category: "Specialty",
+    category: "RO Water Cooling",
     description: "Compact and efficient 2 TR water chiller specially designed for RO water cooling systems.",
     features: ["Optimized for RO Systems", "Compact Design", "Energy Efficient", "Reliable Operation"],
     tempRange: "5°C to 25°C",
@@ -118,7 +118,7 @@ const chillerProducts = [
   {
     id: 8,
     name: "5 TR Water Chiller (RO Water Cooling)",
-    category: "Specialty",
+    category: "RO Water Cooling",
     description: "Robust 5 TR water chiller optimized for large-scale RO water cooling setups.",
     features: ["Optimized for RO Systems", "Heavy Duty Design", "Energy Efficient", "Reliable Operation"],
     tempRange: "5°C to 25°C",
@@ -128,7 +128,7 @@ const chillerProducts = [
   }
 ];
 
-const categories = ["All", "Air Cooled", "Water Cooled", "Heavy Duty", "Specialty"];
+const categories = ["All", "Air Cooled", "Water Cooled", "RO Water Cooling", "Heavy Duty"];
 
 export default function Products() {
   const [searchTerm, setSearchTerm] = useState("");
