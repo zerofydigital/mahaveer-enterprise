@@ -33,6 +33,10 @@ import Img2TR_RO_Side from "../assets/2 tr water chiller for Ro water cooling Si
 import Img2TR_RO_OpSide from "../assets/2 tr water chiller for Ro water cooling op side.jpeg";
 import Img2TR_RO_Back from "../assets/2 tr water chiller for Ro water cooling Back.jpeg";
 
+import Img5TR_RO_Front from "../assets/5tr water chiller for Ro water cooling Front.jpeg";
+import Img5TR_RO_Side from "../assets/5tr water chiller for Ro water cooling Side.jpeg";
+import Img5TR_RO_Back from "../assets/5tr water chiller for Ro water cooling Back.jpeg";
+
 const chillerProducts = [
   {
     id: 1,
@@ -110,6 +114,17 @@ const chillerProducts = [
     capacity: "2 TR",
     image: Img2TR_RO_Front,
     images: [Img2TR_RO_Front, Img2TR_RO_Side, Img2TR_RO_OpSide, Img2TR_RO_Back]
+  },
+  {
+    id: 8,
+    name: "5 TR Water Chiller (RO Water Cooling)",
+    category: "Specialty",
+    description: "Robust 5 TR water chiller optimized for large-scale RO water cooling setups.",
+    features: ["Optimized for RO Systems", "Heavy Duty Design", "Energy Efficient", "Reliable Operation"],
+    tempRange: "5°C to 25°C",
+    capacity: "5 TR",
+    image: Img5TR_RO_Front,
+    images: [Img5TR_RO_Front, Img5TR_RO_Side, Img5TR_RO_Back]
   }
 ];
 
