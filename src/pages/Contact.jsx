@@ -16,6 +16,11 @@ export default function Contact() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     
+    // Enforce limits
+    if (name === 'name' && value.length > 50) return;
+    if (name === 'email' && value.length > 100) return;
+    if (name === 'message' && value.length > 500) return;
+
     // Phone number strict validation: only digits, max 10
     if (name === 'phone') {
       const numericValue = value.replace(/\D/g, '').slice(0, 10);
@@ -33,15 +38,24 @@ export default function Contact() {
     e.preventDefault();
     
     const newErrors = {};
+    const hasTags = (str) => /<[^>]*>|script/i.test(str);
+    
     if (!formData.name.trim()) {
       newErrors.name = 'Full Name is required';
+    } else if (hasTags(formData.name)) {
+      newErrors.name = 'Invalid characters detected';
+    } else if (!/^[a-zA-Z\s\.,'-]+$/.test(formData.name)) {
+      newErrors.name = 'Please enter a valid name (letters only)';
     }
     
-    const phoneRegex = /^[0-9]{10}$/;
+    // Only accept genuine Indian 10-digit mobile numbers (starting with 6-9)
+    const phoneRegex = /^[6-9][0-9]{9}$/;
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone Number is required';
     } else if (!phoneRegex.test(formData.phone)) {
       newErrors.phone = 'Please enter a valid 10-digit phone number';
+    } else if (/^(\d)\1{9}$/.test(formData.phone)) {
+      newErrors.phone = 'Please enter a genuine phone number';
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -49,10 +63,14 @@ export default function Contact() {
       newErrors.email = 'Email Address is required';
     } else if (!emailRegex.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
+    } else if (hasTags(formData.email)) {
+      newErrors.email = 'Invalid characters detected';
     }
 
     if (!formData.message.trim()) {
       newErrors.message = 'Please provide a message';
+    } else if (hasTags(formData.message)) {
+      newErrors.message = 'HTML or Script tags are not allowed';
     }
 
     if (Object.keys(newErrors).length > 0) {
