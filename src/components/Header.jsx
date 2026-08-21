@@ -37,14 +37,10 @@ export default function Header() {
             <div className="nav-dropdown-container">
               <Link to="/products" className="nav-link" onClick={toggleMenu}>Products</Link>
               <div className="nav-dropdown">
-                <Link to="/products" className="dropdown-link" onClick={toggleMenu}>Chilling Plants</Link>
-                <Link to="/products" className="dropdown-link" onClick={toggleMenu}>Industrial Water Chiller</Link>
-                <Link to="/products" className="dropdown-link" onClick={toggleMenu}>Oil Chiller</Link>
-                <Link to="/products" className="dropdown-link" onClick={toggleMenu}>Online R.O Chiller</Link>
-                <Link to="/products" className="dropdown-link" onClick={toggleMenu}>Process Chiller</Link>
-                <Link to="/products" className="dropdown-link" onClick={toggleMenu}>Glycol Chiller</Link>
-                <Link to="/products" className="dropdown-link" onClick={toggleMenu}>Water Chiller</Link>
-                <Link to="/products" className="dropdown-link" onClick={toggleMenu}>AC Outdoor Unit Online Chiller</Link>
+                <Link to="/products" state={{ category: "Air Cooled" }} className="dropdown-link" onClick={toggleMenu}>Air Cooled Chillers</Link>
+                <Link to="/products" state={{ category: "Water Cooled" }} className="dropdown-link" onClick={toggleMenu}>Water Cooled Chillers</Link>
+                <Link to="/products" state={{ category: "RO Water Cooling" }} className="dropdown-link" onClick={toggleMenu}>RO Water Cooling</Link>
+                <Link to="/products" state={{ category: "Heavy Duty" }} className="dropdown-link" onClick={toggleMenu}>Heavy Duty Chillers</Link>
               </div>
             </div>
 

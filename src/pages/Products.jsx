@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Search, X, Check, Droplets, Thermometer, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { useLocation } from 'react-router-dom';
 import "./Products.css";
 import { openQuoteModal } from "../components/QuoteModal";
 
@@ -131,10 +132,17 @@ const chillerProducts = [
 const categories = ["All", "Air Cooled", "Water Cooled", "RO Water Cooling", "Heavy Duty"];
 
 export default function Products() {
+  const location = useLocation();
   const [searchTerm, setSearchTerm] = useState("");
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState(location.state?.category || "All");
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    if (location.state?.category) {
+      setActiveCategory(location.state.category);
+    }
+  }, [location.state?.category]);
 
   useEffect(() => {
     if (selectedProduct) {
