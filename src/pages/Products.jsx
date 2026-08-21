@@ -24,6 +24,10 @@ import Img3TR from "../assets/3 tr water chiller in outdoor unit for Ro water co
 import Img3TR_2 from "../assets/3 tr water chiller in outdoor unit for Ro water cooling Side.jpeg";
 import Img3TR_3 from "../assets/3 tr water chiller in outdoor unit for Ro water cooling Back.jpeg";
 
+import Img7_5TR_New_Front from "../assets/7.5 Water Chiller Front.jpeg";
+import Img7_5TR_New_Side from "../assets/7.5 Water Chiller side.jpeg";
+import Img7_5TR_New_Back from "../assets/7.5 Water Chiller Back.jpeg";
+
 const chillerProducts = [
   {
     id: 1,
@@ -79,6 +83,17 @@ const chillerProducts = [
     capacity: "3 TR",
     image: Img3TR,
     images: [Img3TR, Img3TR_2, Img3TR_3]
+  },
+  {
+    id: 6,
+    name: "7.5 TR Water Chiller",
+    category: "Water Cooled",
+    description: "High-performance 7.5 TR water chiller engineered for demanding industrial processes.",
+    features: ["High Performance Cooling", "Durable Build", "Energy Efficient", "Industrial Grade Components"],
+    tempRange: "5°C to 25°C",
+    capacity: "7.5 TR",
+    image: Img7_5TR_New_Front,
+    images: [Img7_5TR_New_Front, Img7_5TR_New_Side, Img7_5TR_New_Back]
   }
 ];
 
