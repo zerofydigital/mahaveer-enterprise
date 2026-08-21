@@ -1,10 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, FileText } from 'lucide-react';
 import { openQuoteModal } from './QuoteModal';
 import './FloatingActions.css';
 
 export default function FloatingActions() {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // If we scroll down, hide it. Scroll up, show it.
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
   return (
     <>
       {/* Floating WhatsApp Button */}
@@ -21,7 +42,7 @@ export default function FloatingActions() {
       </a>
 
       {/* Mobile Sticky Bar */}
-      <div className="mobile-sticky-bar">
+      <div className={`mobile-sticky-bar ${isVisible ? '' : 'hidden'}`}>
         <a href={`tel:${import.meta.env.VITE_CONTACT_PHONE}`} className="sticky-btn sticky-call">
           <Phone size={18} /> Call Now
         </a>
