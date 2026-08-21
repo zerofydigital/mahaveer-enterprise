@@ -20,6 +20,10 @@ import Img2TR_4 from "../assets/2 TR Chiller Template.jpeg";
 import ImgOther from "../assets/Other Chiller Front.jpeg";
 import ImgOther_2 from "../assets/Other Chiller Back.jpeg";
 
+import Img3TR from "../assets/3 tr water chiller in outdoor unit for Ro water cooling Front.jpeg";
+import Img3TR_2 from "../assets/3 tr water chiller in outdoor unit for Ro water cooling Side.jpeg";
+import Img3TR_3 from "../assets/3 tr water chiller in outdoor unit for Ro water cooling Back.jpeg";
+
 const chillerProducts = [
   {
     id: 1,
@@ -64,6 +68,17 @@ const chillerProducts = [
     capacity: "Custom TR",
     image: ImgOther,
     images: [ImgOther, ImgOther_2]
+  },
+  {
+    id: 5,
+    name: "3 TR Water Chiller (Outdoor Unit)",
+    category: "Specialty",
+    description: "3 TR water chiller designed in an outdoor unit specifically for RO water cooling applications.",
+    features: ["Outdoor Unit Design", "Ideal for RO Water Cooling", "Weather Resistant", "High Efficiency Cooling"],
+    tempRange: "5°C to 25°C",
+    capacity: "3 TR",
+    image: Img3TR,
+    images: [Img3TR, Img3TR_2, Img3TR_3]
   }
 ];
 
