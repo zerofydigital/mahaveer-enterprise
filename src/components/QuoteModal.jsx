@@ -34,16 +34,18 @@ export default function QuoteModal() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     
-    // Enforce limits
-    if (name === 'name' && value.length > 200) return;
-    if (name === 'email' && value.length > 100) return;
-    if (name === 'requirement' && value.length > 500) return;
-
-    // Phone number strict validation: only digits, max 10
-    if (name === 'phone') {
+    // Special handling for name to block special chars and double spaces
+    if (name === 'name') {
+      if (value.length > 200) return;
+      let sanitizedName = value.replace(/[^a-zA-Z\s'-]/g, ''); // Allow only letters, spaces, hyphens, apostrophes
+      sanitizedName = sanitizedName.replace(/\s{2,}/g, ' '); // Prevent consecutive spaces
+      setFormData(prev => ({ ...prev, [name]: sanitizedName }));
+    } else if (name === 'phone') {
       const numericValue = value.replace(/\D/g, '').slice(0, 10);
       setFormData(prev => ({ ...prev, [name]: numericValue }));
     } else {
+      if (name === 'email' && value.length > 100) return;
+      if (name === 'requirement' && value.length > 500) return;
       setFormData(prev => ({ ...prev, [name]: value }));
     }
     
