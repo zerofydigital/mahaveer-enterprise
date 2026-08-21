@@ -16,18 +16,26 @@ export default function Contact() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     
-    // Special handling for name to block special chars and double spaces
+    // Foolproof frontend sanitization
     if (name === 'name') {
       if (value.length > 200) return;
-      let sanitizedName = value.replace(/[^a-zA-Z\s'-]/g, ''); // Allow only letters, spaces, hyphens, apostrophes
-      sanitizedName = sanitizedName.replace(/\s{2,}/g, ' '); // Prevent consecutive spaces
+      let sanitizedName = value.replace(/[^a-zA-Z\s'-]/g, ''); 
+      sanitizedName = sanitizedName.replace(/^\s/, '').replace(/\s{2,}/g, ' '); 
       setFormData(prev => ({ ...prev, [name]: sanitizedName }));
     } else if (name === 'phone') {
-      const numericValue = value.replace(/\D/g, '').slice(0, 10);
+      let numericValue = value.replace(/\D/g, '');
+      numericValue = numericValue.replace(/^[^6-9]+/, ''); // Must start with 6-9
+      numericValue = numericValue.slice(0, 10);
       setFormData(prev => ({ ...prev, [name]: numericValue }));
+    } else if (name === 'email') {
+      if (value.length > 100) return;
+      let sanitizedEmail = value.replace(/\s/g, ''); // No spaces in email
+      setFormData(prev => ({ ...prev, [name]: sanitizedEmail }));
+    } else if (name === 'message') {
+      if (value.length > 500) return;
+      let sanitizedMessage = value.replace(/[<>]/g, ''); // Block HTML tags
+      setFormData(prev => ({ ...prev, [name]: sanitizedMessage }));
     } else {
-      if (name === 'email' && value.length > 100) return;
-      if (name === 'message' && value.length > 500) return;
       setFormData(prev => ({ ...prev, [name]: value }));
     }
     
@@ -60,12 +68,10 @@ export default function Contact() {
       newErrors.phone = 'Please enter a genuine phone number';
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email Address is required';
-    } else if (!emailRegex.test(formData.email)) {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (formData.email.trim() && !emailRegex.test(formData.email.trim())) {
       newErrors.email = 'Please enter a valid email address';
-    } else if (hasTags(formData.email)) {
+    } else if (formData.email && hasTags(formData.email)) {
       newErrors.email = 'Invalid characters detected';
     }
 
