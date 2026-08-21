@@ -73,12 +73,12 @@ const chillerProducts = [
   },
   {
     id: 4,
-    name: "Custom Industrial Process Chiller",
+    name: "10 TR Water Chiller (RO Water Cooling)",
     category: "Specialty",
-    description: "Custom-built industrial process chiller engineered specifically for manufacturing processes requiring continuous operation and specialized setups.",
-    features: ["Precise Temperature Control", "Heavy Duty Custom Build", "High Flow Pumps", "Bypass Valves"],
-    tempRange: "-10°C to +30°C",
-    capacity: "Custom TR",
+    description: "High-capacity 10 TR water chiller designed for intensive RO water cooling applications.",
+    features: ["Ideal for RO Water Cooling", "High Capacity", "Continuous Operation", "Reliable Performance"],
+    tempRange: "5°C to 25°C",
+    capacity: "10 TR",
     image: ImgOther,
     images: [ImgOther, ImgOther_2]
   },
