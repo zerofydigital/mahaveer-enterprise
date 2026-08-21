@@ -17,8 +17,8 @@ import Img2TR_2 from "../assets/2 TR Chiller Side.jpeg";
 import Img2TR_3 from "../assets/2 TR Chiller SIde Opp.jpeg";
 import Img2TR_4 from "../assets/2 TR Chiller Template.jpeg";
 
-import ImgOther from "../assets/Other Chiller Front.jpeg";
-import ImgOther_2 from "../assets/Other Chiller Back.jpeg";
+import ImgOther from "../assets/10 tr water chiller for Ro water cooling Front.jpeg";
+import ImgOther_2 from "../assets/10 tr water chiller for Ro water cooling Back.jpeg";
 
 import Img3TR from "../assets/3 tr water chiller in outdoor unit for Ro water cooling Front.jpeg";
 import Img3TR_2 from "../assets/3 tr water chiller in outdoor unit for Ro water cooling Side.jpeg";

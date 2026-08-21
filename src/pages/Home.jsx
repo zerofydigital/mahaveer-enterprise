@@ -5,7 +5,7 @@ import { openQuoteModal } from '../components/QuoteModal';
 import './Home.css';
 import VideoHero from '../assets/hero bg video.mp4';
 
-import Img5TR from '../assets/Other Chiller Front.jpeg';
+import Img5TR from '../assets/10 tr water chiller for Ro water cooling Front.jpeg';
 import Img7_5TR from '../assets/7.5 TR Front Side.png';
 import Img2TR from '../assets/2 TR Front Side.jpeg';
 

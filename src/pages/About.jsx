@@ -3,7 +3,7 @@ import { CheckCircle, User, Activity, Coffee, Box, Beaker, Zap, Cog, Building, A
 import { openQuoteModal } from '../components/QuoteModal';
 import './About.css';
 
-import ImgAbout2 from '../assets/Other Chiller Front.jpeg';
+import ImgAbout2 from '../assets/10 tr water chiller for Ro water cooling Front.jpeg';
 
 export default function About() {
   return (
