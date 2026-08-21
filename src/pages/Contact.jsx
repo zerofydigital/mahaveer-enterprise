@@ -17,7 +17,7 @@ export default function Contact() {
     const { name, value } = e.target;
     
     // Enforce limits
-    if (name === 'name' && value.length > 50) return;
+    if (name === 'name' && value.length > 200) return;
     if (name === 'email' && value.length > 100) return;
     if (name === 'message' && value.length > 500) return;
 

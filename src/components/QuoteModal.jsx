@@ -35,7 +35,7 @@ export default function QuoteModal() {
     const { name, value } = e.target;
     
     // Enforce limits
-    if (name === 'name' && value.length > 50) return;
+    if (name === 'name' && value.length > 200) return;
     if (name === 'email' && value.length > 100) return;
     if (name === 'requirement' && value.length > 500) return;
 
