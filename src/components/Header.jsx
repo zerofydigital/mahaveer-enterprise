@@ -33,7 +33,21 @@ export default function Header() {
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
             <Link to="/" className="nav-link" onClick={toggleMenu}>Home</Link>
             <Link to="/about" className="nav-link" onClick={toggleMenu}>About Us</Link>
-            <Link to="/products" className="nav-link" onClick={toggleMenu}>Products</Link>
+            
+            <div className="nav-dropdown-container">
+              <Link to="/products" className="nav-link" onClick={toggleMenu}>Products</Link>
+              <div className="nav-dropdown">
+                <Link to="/products" className="dropdown-link" onClick={toggleMenu}>Chilling Plants</Link>
+                <Link to="/products" className="dropdown-link" onClick={toggleMenu}>Industrial Water Chiller</Link>
+                <Link to="/products" className="dropdown-link" onClick={toggleMenu}>Oil Chiller</Link>
+                <Link to="/products" className="dropdown-link" onClick={toggleMenu}>Online R.O Chiller</Link>
+                <Link to="/products" className="dropdown-link" onClick={toggleMenu}>Process Chiller</Link>
+                <Link to="/products" className="dropdown-link" onClick={toggleMenu}>Glycol Chiller</Link>
+                <Link to="/products" className="dropdown-link" onClick={toggleMenu}>Water Chiller</Link>
+                <Link to="/products" className="dropdown-link" onClick={toggleMenu}>AC Outdoor Unit Online Chiller</Link>
+              </div>
+            </div>
+
             <Link to="/contact" className="nav-link" onClick={toggleMenu}>Contact</Link>
             <a href="#" className="btn btn-primary get-quote-btn" onClick={(e) => { e.preventDefault(); openQuoteModal(); toggleMenu(); }}>Get a Quote</a>
           </nav>
