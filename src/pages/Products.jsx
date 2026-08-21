@@ -28,6 +28,11 @@ import Img7_5TR_New_Front from "../assets/7.5 Water Chiller Front.jpeg";
 import Img7_5TR_New_Side from "../assets/7.5 Water Chiller side.jpeg";
 import Img7_5TR_New_Back from "../assets/7.5 Water Chiller Back.jpeg";
 
+import Img2TR_RO_Front from "../assets/2 tr water chiller for Ro water cooling Front.jpeg";
+import Img2TR_RO_Side from "../assets/2 tr water chiller for Ro water cooling Side.jpeg";
+import Img2TR_RO_OpSide from "../assets/2 tr water chiller for Ro water cooling op side.jpeg";
+import Img2TR_RO_Back from "../assets/2 tr water chiller for Ro water cooling Back.jpeg";
+
 const chillerProducts = [
   {
     id: 1,
@@ -94,6 +99,17 @@ const chillerProducts = [
     capacity: "7.5 TR",
     image: Img7_5TR_New_Front,
     images: [Img7_5TR_New_Front, Img7_5TR_New_Side, Img7_5TR_New_Back]
+  },
+  {
+    id: 7,
+    name: "2 TR Water Chiller (RO Water Cooling)",
+    category: "Specialty",
+    description: "Compact and efficient 2 TR water chiller specially designed for RO water cooling systems.",
+    features: ["Optimized for RO Systems", "Compact Design", "Energy Efficient", "Reliable Operation"],
+    tempRange: "5°C to 25°C",
+    capacity: "2 TR",
+    image: Img2TR_RO_Front,
+    images: [Img2TR_RO_Front, Img2TR_RO_Side, Img2TR_RO_OpSide, Img2TR_RO_Back]
   }
 ];
 
