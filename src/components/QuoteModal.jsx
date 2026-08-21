@@ -135,7 +135,7 @@ export default function QuoteModal() {
   if (!isOpen) return null;
 
   return (
-    <div className="quote-modal-overlay" onClick={() => setIsOpen(false)}>
+    <div className="quote-modal-overlay">
       <div className="quote-modal-content" onClick={e => e.stopPropagation()}>
         <button className="quote-modal-close" onClick={() => setIsOpen(false)}>
           <X size={24} />
