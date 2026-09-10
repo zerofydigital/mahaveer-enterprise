@@ -54,7 +54,7 @@ export default function Contact() {
       newErrors.name = 'Full Name is required';
     } else if (hasTags(formData.name)) {
       newErrors.name = 'Invalid characters detected';
-    } else if (!/^[a-zA-Z\s\.,'-]+$/.test(formData.name)) {
+    } else if (!/^[a-zA-Z\s.,'-]+$/.test(formData.name)) {
       newErrors.name = 'Please enter a valid name (letters only)';
     }
     

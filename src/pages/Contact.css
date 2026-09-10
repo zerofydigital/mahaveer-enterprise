@@ -75,8 +75,6 @@
 
 
 
-textarea
-
 .gap-4 {
   gap: 1rem;
 }
@@ -98,4 +96,13 @@ textarea
 .map-section {
   display: flex;
   background-color: #f1f5f9;
+}
+
+@media (max-width: 600px) {
+  .contact-form-card {
+    padding: 1.5rem 1rem;
+  }
+  .contact-grid {
+    gap: 2.5rem;
+  }
 }

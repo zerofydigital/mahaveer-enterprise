@@ -63,9 +63,10 @@ export default function Footer() {
       
       <div className="footer-bottom">
         <div className="container text-center">
-          <p>
-            &copy; {new Date().getFullYear()} Mahaveer Enterprise. All rights reserved. <span style={{margin: '0 10px'}}>|</span>
-            Designed & Developed by <a href="https://zerofydigital.vercel.app/" target="_blank" rel="noreferrer" style={{color: 'var(--accent)', textDecoration: 'none', fontWeight: 'bold'}}>Zerofy Digital</a>
+          <p className="footer-bottom-text">
+            <span>&copy; {new Date().getFullYear()} Mahaveer Enterprise. All rights reserved.</span>
+            <span className="footer-divider" style={{margin: '0 10px'}}>|</span>
+            <span>Designed &amp; Developed by <a href="https://zerofydigital.vercel.app/" target="_blank" rel="noreferrer" style={{color: 'var(--accent)', textDecoration: 'none', fontWeight: 'bold'}}>Zerofy Digital</a></span>
           </p>
         </div>
       </div>

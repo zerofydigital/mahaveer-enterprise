@@ -2,10 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { X, Send } from 'lucide-react';
 import './QuoteModal.css';
 
-export const openQuoteModal = (productName = '') => {
-  window.dispatchEvent(new CustomEvent('open-quote-modal', { detail: { productName } }));
-};
-
 export default function QuoteModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -73,7 +69,7 @@ export default function QuoteModal() {
       newErrors.name = 'Full Name is required';
     } else if (hasTags(formData.name)) {
       newErrors.name = 'Invalid characters detected';
-    } else if (!/^[a-zA-Z\s\.,'-]+$/.test(formData.name)) {
+    } else if (!/^[a-zA-Z\s.,'-]+$/.test(formData.name)) {
       newErrors.name = 'Please enter a valid name (letters only)';
     }
     

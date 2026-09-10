@@ -79,6 +79,15 @@
   font-size: 0.875rem;
 }
 
+.footer-bottom-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  word-break: break-word;
+}
+
 @media (max-width: 1024px) {
   .footer-content {
     grid-template-columns: 1fr 1fr;
@@ -92,5 +101,15 @@
   }
   .footer {
     padding: 4rem 0 2rem; /* Ensure proper bottom padding on mobile */
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-divider {
+    display: none;
+  }
+  .footer-bottom-text {
+    flex-direction: column;
+    gap: 0.35rem;
   }
 }

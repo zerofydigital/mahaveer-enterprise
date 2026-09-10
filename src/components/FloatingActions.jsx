@@ -1,30 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
 import { Phone, FileText } from 'lucide-react';
-import { openQuoteModal } from './QuoteModal';
+import { openQuoteModal } from '../utils/openQuoteModal';
 import './FloatingActions.css';
 
 export default function FloatingActions() {
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollYRef = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
-      // If we scroll down, hide it. Scroll up, show it.
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      if (currentScrollY > lastScrollYRef.current && currentScrollY > 100) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
       }
       
-      setLastScrollY(currentScrollY);
+      lastScrollYRef.current = currentScrollY;
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   return (
     <>
@@ -46,7 +44,7 @@ export default function FloatingActions() {
         <a href={`tel:${import.meta.env.VITE_CONTACT_PHONE}`} className="sticky-btn sticky-call">
           <Phone size={18} /> Call Now
         </a>
-        <a href="#" onClick={(e) => { e.preventDefault(); openQuoteModal(); }}  className="sticky-btn sticky-quote"><FileText size={18} /> Request Quote</a>
+        <a href="#" onClick={(e) => { e.preventDefault(); openQuoteModal(); }} className="sticky-btn sticky-quote"><FileText size={18} /> Request Quote</a>
       </div>
     </>
   );

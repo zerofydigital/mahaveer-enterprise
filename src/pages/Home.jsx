@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Settings, Headphones, Wrench, Award, CheckCircle, PenTool, Factory, Activity, Truck, Beaker, Coffee, Box, Cog, Zap, Building } from 'lucide-react';
-import { openQuoteModal } from '../components/QuoteModal';
+import { openQuoteModal } from '../utils/openQuoteModal';
 import './Home.css';
 import VideoHero from '../assets/hero bg video.mp4';
 
@@ -180,39 +180,68 @@ export default function Home() {
 
           <div className="grid grid-cols-3 mt-12">
             <div className="product-card-home">
-              <div className="product-image-home" style={{ backgroundImage: `url(${Img5TR})` }}>
+              <div className="product-image-home">
+                <img src={Img5TR} alt="5 TR Air Cooled Water Chiller" className="product-home-img" loading="lazy" />
+                <span className="home-card-badge-type">Air Cooled</span>
+                <span className="home-card-badge-tonnage">5 TR</span>
               </div>
               <div className="product-card-home-content">
                 <h3>5 TR Air Cooled Water Chiller</h3>
-                <p>Heavy-duty performance for massive thermal loads.</p>
-                <div className="product-specs-hover">
-                  <span>Cap: 5TR - 1000TR</span> | <span>Temp: -5°C to 25°C</span>
+                <p>Heavy-duty performance for massive thermal loads and industrial machinery.</p>
+                <div className="product-home-specs-grid">
+                  <div><span className="spec-sub">Cap:</span> <strong>5 TR (17.5 kW)</strong></div>
+                  <div><span className="spec-sub">Temp:</span> <strong>5°C to 25°C</strong></div>
+                  <div><span className="spec-sub">Tank:</span> <strong>SS304 Insulated</strong></div>
+                  <div><span className="spec-sub">Control:</span> <strong>PID Micro</strong></div>
                 </div>
-                <Link to="/products" className="arrow-link">View Specifications <ArrowRight size={16} /></Link>
+                <div className="product-home-card-actions">
+                  <Link to="/products" className="btn-home-card-specs">View Specs <ArrowRight size={14} /></Link>
+                  <button type="button" className="btn-home-card-quote" onClick={() => openQuoteModal("5 TR Air Cooled Water Chiller")}>Quick Quote</button>
+                </div>
               </div>
             </div>
+
             <div className="product-card-home">
-              <div className="product-image-home" style={{ backgroundImage: `url(${Img7_5TR})` }}>
+              <div className="product-image-home">
+                <img src={Img7_5TR} alt="7.5 TR Air Cooled Water Chiller" className="product-home-img" loading="lazy" />
+                <span className="home-card-badge-type">Air Cooled</span>
+                <span className="home-card-badge-tonnage">7.5 TR</span>
               </div>
               <div className="product-card-home-content">
                 <h3>7.5 TR Air Cooled Water Chiller</h3>
-                <p>Zero water wastage with maximum thermal efficiency.</p>
-                <div className="product-specs-hover">
-                  <span>Cap: 1TR - 200TR</span> | <span>Temp: 0°C to 30°C</span>
+                <p>Zero water wastage with dual high-CFM axial fans and maximum thermal efficiency.</p>
+                <div className="product-home-specs-grid">
+                  <div><span className="spec-sub">Cap:</span> <strong>7.5 TR (26.3 kW)</strong></div>
+                  <div><span className="spec-sub">Temp:</span> <strong>5°C to 25°C</strong></div>
+                  <div><span className="spec-sub">Tank:</span> <strong>SS304 Insulated</strong></div>
+                  <div><span className="spec-sub">Control:</span> <strong>PID Micro</strong></div>
                 </div>
-                <Link to="/products" className="arrow-link">View Specifications <ArrowRight size={16} /></Link>
+                <div className="product-home-card-actions">
+                  <Link to="/products" className="btn-home-card-specs">View Specs <ArrowRight size={14} /></Link>
+                  <button type="button" className="btn-home-card-quote" onClick={() => openQuoteModal("7.5 TR Air Cooled Water Chiller")}>Quick Quote</button>
+                </div>
               </div>
             </div>
+
             <div className="product-card-home">
-              <div className="product-image-home" style={{ backgroundImage: `url(${Img2TR})` }}>
+              <div className="product-image-home">
+                <img src={Img2TR} alt="2 TR Air Cooled Water Chiller" className="product-home-img" loading="lazy" />
+                <span className="home-card-badge-type">Air Cooled</span>
+                <span className="home-card-badge-tonnage">2 TR</span>
               </div>
               <div className="product-card-home-content">
                 <h3>2 TR Air Cooled Water Chiller</h3>
-                <p>Continuous uninterrupted cooling for automation.</p>
-                <div className="product-specs-hover">
-                  <span>Precision: ±1°C</span> | <span>Continuous Duty</span>
+                <p>Ultra-compact continuous uninterrupted cooling for CNC, laser, and automation setups.</p>
+                <div className="product-home-specs-grid">
+                  <div><span className="spec-sub">Cap:</span> <strong>2 TR (7 kW)</strong></div>
+                  <div><span className="spec-sub">Temp:</span> <strong>5°C to 20°C</strong></div>
+                  <div><span className="spec-sub">Tank:</span> <strong>SS304 Insulated</strong></div>
+                  <div><span className="spec-sub">Control:</span> <strong>PID Micro</strong></div>
                 </div>
-                <Link to="/products" className="arrow-link">View Specifications <ArrowRight size={16} /></Link>
+                <div className="product-home-card-actions">
+                  <Link to="/products" className="btn-home-card-specs">View Specs <ArrowRight size={14} /></Link>
+                  <button type="button" className="btn-home-card-quote" onClick={() => openQuoteModal("2 TR Air Cooled Water Chiller")}>Quick Quote</button>
+                </div>
               </div>
             </div>
           </div>

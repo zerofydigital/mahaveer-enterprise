@@ -1,6 +1,6 @@
 import React from 'react';
-import { CheckCircle, User, Activity, Coffee, Box, Beaker, Zap, Cog, Building, ArrowRight } from 'lucide-react';
-import { openQuoteModal } from '../components/QuoteModal';
+import { User, Activity, Coffee, Box, Beaker, Zap, Cog, Building, ArrowRight } from 'lucide-react';
+import { openQuoteModal } from '../utils/openQuoteModal';
 import './About.css';
 
 import ImgAbout2 from '../assets/10 tr water chiller for Ro water cooling Front.jpeg';

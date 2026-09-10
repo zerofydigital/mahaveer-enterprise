@@ -60,10 +60,13 @@ function ScrollReveal() {
       observeElements();
     });
 
-    mutationObserver.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
+    const mainEl = document.querySelector('.main-content');
+    if (mainEl) {
+      mutationObserver.observe(mainEl, {
+        childList: true,
+        subtree: true
+      });
+    }
 
     return () => {
       observer.disconnect();
@@ -74,9 +77,27 @@ function ScrollReveal() {
   return null;
 }
 
+const pageTitles = {
+  '/': 'Mahaveer Enterprise - Industrial Chiller Manufacturer',
+  '/about': 'About Us - Mahaveer Enterprise',
+  '/products': 'Products - Industrial Chillers | Mahaveer Enterprise',
+  '/contact': 'Contact Us - Mahaveer Enterprise',
+};
+
+function PageTitle() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    document.title = pageTitles[pathname] || 'Mahaveer Enterprise';
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <Router>
+      <PageTitle />
       <ScrollToTop />
       <ScrollReveal />
       <Header />

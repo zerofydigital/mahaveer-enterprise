@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
-import { openQuoteModal } from './QuoteModal';
+import { openQuoteModal } from '../utils/openQuoteModal';
 import './Header.css';
 
 export default function Header() {
@@ -31,20 +31,20 @@ export default function Header() {
           </Link>
           
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
-            <Link to="/" className="nav-link" onClick={toggleMenu}>Home</Link>
-            <Link to="/about" className="nav-link" onClick={toggleMenu}>About Us</Link>
+            <NavLink to="/" end className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={toggleMenu}>Home</NavLink>
+            <NavLink to="/about" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={toggleMenu}>About Us</NavLink>
             
             <div className="nav-dropdown-container">
-              <Link to="/products" className="nav-link" onClick={toggleMenu}>Products</Link>
+              <NavLink to="/products" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={toggleMenu}>Products</NavLink>
               <div className="nav-dropdown">
                 <Link to="/products" state={{ category: "Air Cooled" }} className="dropdown-link" onClick={toggleMenu}>Air Cooled Chillers</Link>
                 <Link to="/products" state={{ category: "Water Cooled" }} className="dropdown-link" onClick={toggleMenu}>Water Cooled Chillers</Link>
                 <Link to="/products" state={{ category: "RO Water Cooling" }} className="dropdown-link" onClick={toggleMenu}>RO Water Cooling</Link>
-                <Link to="/products" state={{ category: "Heavy Duty" }} className="dropdown-link" onClick={toggleMenu}>Heavy Duty Chillers</Link>
+                <Link to="/products" state={{ category: "Screw Chillers" }} className="dropdown-link" onClick={toggleMenu}>Screw Chillers</Link>
               </div>
             </div>
 
-            <Link to="/contact" className="nav-link" onClick={toggleMenu}>Contact</Link>
+            <NavLink to="/contact" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={toggleMenu}>Contact</NavLink>
             <a href="#" className="btn btn-primary get-quote-btn" onClick={(e) => { e.preventDefault(); openQuoteModal(); toggleMenu(); }}>Get a Quote</a>
           </nav>
           
