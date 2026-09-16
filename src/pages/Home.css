@@ -1,62 +1,221 @@
-/* Modern Industrial Home CSS */
+/* Executive Corporate Hero Section */
 .hero {
-  min-height: calc(100vh - 115px);
+  height: calc(100vh - 124px);
+  min-height: 520px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   overflow: hidden;
-  background-color: var(--bg-color);
+  background: #070e17;
+  padding: 0.5rem 0 0;
 }
 
-.hero-bg-graphic {
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  background: 
-    linear-gradient(135deg, rgba(248, 250, 252, 0.95) 0%, rgba(241, 245, 249, 0.95) 100%),
-    url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80') center/cover;
-  z-index: 0;
-}
-
-.hero-content {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  align-items: center;
-  gap: 4rem;
-  z-index: 2;
+.hero-slider-section {
   position: relative;
 }
 
-.hero-label {
-  display: inline-block;
-  color: var(--primary);
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.6) contrast(1.15);
+}
+
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 45%, rgba(14, 30, 56, 0.6) 0%, rgba(7, 14, 23, 0.85) 55%, rgba(4, 9, 15, 0.96) 100%);
+  z-index: 1;
+}
+
+/* Main Grid Layout */
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: clamp(2rem, 3.5vw, 3.5rem);
+  z-index: 5;
+  position: relative;
+  flex: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.75rem 0;
+}
+
+.hero-text-wrapper {
+  animation: heroSlideFadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Corporate Trust Tag */
+.hero-trust-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: clamp(0.5rem, 1vh, 0.85rem);
+  background: rgba(30, 58, 138, 0.25);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  padding: 5px 14px;
+  border-radius: 6px;
+  color: #93c5fd;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
-  font-size: 0.85rem;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
+.trust-icon {
+  color: #60a5fa;
+  flex-shrink: 0;
+}
+
+/* Hero Typography */
 .hero-title {
-  font-size: 4.5rem;
-  line-height: 1.1;
-  letter-spacing: -1px;
-  margin-bottom: 1.5rem;
-  color: var(--primary-dark);
+  font-size: clamp(2.1rem, 3.2vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: clamp(0.5rem, 1vh, 0.85rem);
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title-accent {
+  color: var(--accent);
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
 }
 
 .hero-subtitle {
-  font-size: 1.15rem;
-  color: var(--text-secondary);
-  margin-bottom: 2.5rem;
-  max-width: 550px;
+  font-size: clamp(0.9rem, 1.05vw, 1.05rem);
+  color: #cbd5e1;
+  margin-bottom: clamp(0.85rem, 1.5vh, 1.4rem);
+  max-width: 540px;
   line-height: 1.6;
 }
 
-.hero-actions {
-  display: flex;
-  gap: 1.25rem;
+/* Engineering Technical Matrix */
+.hero-specs-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.45rem, 0.9vh, 0.65rem);
+  margin-bottom: clamp(0.85rem, 1.6vh, 1.4rem);
+  max-width: 500px;
 }
 
+.hero-spec-card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: clamp(0.45rem, 0.8vh, 0.55rem) clamp(0.65rem, 1vw, 0.85rem);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.hero-spec-card:hover {
+  background: rgba(22, 34, 58, 0.85);
+  border-color: rgba(255, 255, 255, 0.25);
+  border-left-color: #fb923c;
+  transform: translateY(-2px);
+}
+
+.hero-spec-val {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.25;
+}
+
+.hero-spec-lbl {
+  color: #94a3b8;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-top: 3px;
+  font-weight: 600;
+}
+
+/* Hero Actions */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.85rem 1.65rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(234, 88, 12, 0.35);
+  transition: all 0.25s ease;
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(234, 88, 12, 0.5);
+}
+
+.hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.85rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.hero-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* Fast B2B Direct Trust Markers */
+.hero-trust-bullets {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: clamp(0.75rem, 1.4vh, 1.15rem);
+  flex-wrap: wrap;
+}
+
+.trust-bullet-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #94a3b8;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.bullet-icon {
+  color: #22c55e;
+  flex-shrink: 0;
+}
+
+/* Machine Visual Showcase Stage */
 .hero-visual {
   position: relative;
   display: flex;
@@ -64,15 +223,346 @@
   align-items: center;
 }
 
+.hero-showcase-stage {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: heroImageScaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Industrial Console Product Card */
+.showcase-console-card {
+  width: 100%;
+  background: linear-gradient(145deg, rgba(13, 23, 40, 0.88) 0%, rgba(6, 13, 24, 0.96) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 0.85rem 1.1rem 0.85rem;
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  position: relative;
+}
+
+/* Console Header */
+.console-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.65rem;
+}
+
+.console-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+  animation: pulseDot 2s infinite;
+}
+
+.status-text {
+  color: #94a3b8;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.console-capacity-pill {
+  background: linear-gradient(135deg, var(--accent) 0%, #c2410c 100%);
+  color: white;
+  font-weight: 800;
+  font-size: 0.78rem;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 10px rgba(234, 88, 12, 0.4);
+}
+
+/* Console Viewport Display Window */
+.console-viewport {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 40%, rgba(30, 58, 138, 0.28) 0%, rgba(8, 15, 26, 0.7) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.console-ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(234, 88, 12, 0.16) 0%, rgba(30, 58, 138, 0.22) 45%, transparent 70%);
+  pointer-events: none;
+}
+
 .hero-img {
   width: 100%;
-  max-width: 450px;
-  height: 550px;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  height: clamp(190px, 26vh, 275px);
+  object-fit: contain;
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.65));
   position: relative;
   z-index: 2;
+  display: block;
+}
+
+/* Console Bottom Specification Strip */
+.console-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.console-footer-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.console-footer-divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-label {
+  color: #64748b;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.footer-val {
+  color: #f8fafc;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+/* Corporate Product Navigation Bar (Slider Dock) */
+.hero-slider-dock {
+  position: relative;
+  width: 100%;
+  z-index: 15;
+  background: linear-gradient(to top, rgba(4, 9, 15, 0.98) 0%, rgba(4, 9, 15, 0.75) 65%, transparent 100%);
+  padding: 0.55rem 0 0.8rem;
+  flex-shrink: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hero-dock-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.hero-dock-tabs {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  max-width: 980px;
+}
+
+.hero-dock-tab {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.5rem 0.85rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-dock-tab:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.hero-dock-tab.active {
+  background: rgba(234, 88, 12, 0.12);
+  border-color: rgba(234, 88, 12, 0.6);
+  box-shadow: 0 4px 16px rgba(234, 88, 12, 0.15);
+}
+
+.tab-progress-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.tab-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ea580c, #fb923c);
+  width: 0%;
+  animation: tabProgress 6s linear forwards;
+}
+
+.tab-progress-fill.paused {
+  animation-play-state: paused;
+}
+
+.tab-content-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.tab-icon {
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.hero-dock-tab.active .tab-icon {
+  background: rgba(234, 88, 12, 0.25);
+  color: #fb923c;
+}
+
+.tab-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.tab-sub {
+  color: #94a3b8;
+  font-size: 0.68rem;
+  font-weight: 500;
+  margin-top: 1px;
+}
+
+/* Dock Controls */
+.hero-dock-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-dock-arrow-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.hero-dock-arrow-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: scale(1.08);
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.4);
+}
+
+.hero-dock-counter {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: white;
+  font-size: 0.92rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  backdrop-filter: blur(8px);
+}
+
+.hero-dock-counter .counter-current {
+  color: var(--accent);
+}
+
+.hero-dock-counter .counter-sep {
+  opacity: 0.4;
+  margin: 0 2px;
+}
+
+.hero-dock-counter .counter-total {
+  opacity: 0.7;
+}
+
+/* Keyframe Animations */
+@keyframes tabProgress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes heroSlideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroImageScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes pulseDot {
+  0% { box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.8); }
+  70% { box-shadow: 0 0 0 8px rgba(234, 88, 12, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(234, 88, 12, 0); }
 }
 
 /* Stats Strip */
@@ -473,42 +963,12 @@
   color: var(--accent);
 }
 
-@media (max-width: 1024px) {
-  .hero-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .hero-actions {
-    justify-content: center;
-  }
-  .hero-visual {
-    margin-top: 2rem;
-  }
-  
-}
-
 @media (max-width: 768px) {
-  .hero-title { font-size: 2.75rem; }
   .stats-grid { flex-direction: column; gap: 2rem; }
   .cta-title { font-size: 2.25rem; }
-  .hero-visual { display: none; }
-  .hero-actions {
-    flex-wrap: wrap;
-    gap: 0.85rem;
-  }
 }
 
 @media (max-width: 480px) {
-  .hero-title { font-size: 2.1rem; }
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-  }
-  .hero-actions .btn {
-    width: 100%;
-    justify-content: center;
-  }
   .product-home-card-actions {
     flex-direction: column;
     gap: 0.5rem;
@@ -1024,3 +1484,166 @@
     text-align: center;
   }
 }
+
+/* Hero Slider Responsive Rules */
+@media (max-width: 1024px) {
+  .hero {
+    height: auto;
+    min-height: calc(100vh - 124px);
+    max-height: none;
+    padding: 1rem 0 1rem;
+  }
+  .hero-content {
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  .hero-title {
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  }
+  .hero-img {
+    height: clamp(190px, 24vh, 260px);
+  }
+  .showcase-console-card {
+    max-width: 400px;
+  }
+  .hero-dock-tabs {
+    max-width: 100%;
+  }
+  .hero-dock-tab {
+    padding: 0.5rem 0.65rem;
+  }
+  .tab-title {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    padding: 1.5rem 0 5.5rem !important;
+  }
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    padding: 0;
+  }
+  .hero-trust-tag {
+    margin: 0 auto 0.75rem;
+  }
+  .hero-title {
+    font-size: clamp(1.75rem, 5.5vw, 2.3rem);
+    margin-bottom: 0.5rem;
+  }
+  .hero-subtitle {
+    margin: 0 auto 1rem;
+    font-size: 0.9rem;
+    max-width: 460px;
+  }
+  .hero-specs-row {
+    margin: 0 auto 1.25rem;
+    max-width: 420px;
+    gap: 0.5rem;
+  }
+  .hero-actions {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  .hero-trust-bullets {
+    justify-content: center;
+    gap: 0.85rem;
+  }
+  .hero-showcase-stage {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  .showcase-console-card {
+    padding: 0.75rem 0.9rem;
+  }
+  .hero-img {
+    height: 190px;
+  }
+  .hero-slider-dock {
+    position: relative !important;
+    padding: 0.5rem 0 0;
+  }
+  .hero-dock-container {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero-dock-controls {
+    order: 1;
+    margin-bottom: 0.25rem;
+  }
+  .hero-dock-tabs {
+    order: 2;
+    width: 100%;
+    gap: 0.4rem;
+  }
+  .hero-dock-tab {
+    padding: 0.45rem 0.35rem;
+    text-align: center;
+  }
+  .tab-content-inner {
+    justify-content: center;
+    gap: 5px;
+  }
+  .tab-icon {
+    display: none;
+  }
+  .tab-text-group {
+    align-items: center;
+  }
+  .tab-title {
+    font-size: 0.75rem;
+  }
+  .tab-sub {
+    font-size: 0.65rem;
+  }
+  .hero-dock-arrow-btn {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.25rem 0 5.5rem !important;
+  }
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  .hero-specs-row {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    max-width: 300px;
+  }
+  .hero-spec-card {
+    padding: 0.4rem 0.75rem;
+    text-align: left;
+  }
+  .hero-showcase-stage {
+    max-width: 290px;
+  }
+  .hero-img {
+    height: 165px;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-dock-counter {
+    padding: 0.25rem 0.65rem;
+    font-size: 0.82rem;
+  }
+}
+

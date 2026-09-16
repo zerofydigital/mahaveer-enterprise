@@ -57,102 +57,6 @@ import Img90TR_Screw from "../assets/90 TR Air Cooled Screw Chiller.jpeg";
 const chillerProducts = [
   {
     id: 1,
-    name: "5 TR Air Cooled Water Chiller",
-    category: "Air Cooled",
-    shortDescription: "High-efficiency V-Type air-cooled chiller engineered with energy-saving scroll compressor, insulated SS304 tank, and microcomputer temperature control.",
-    description: `The 5 TR Air Cooled Water Chiller is a high-efficiency industrial refrigeration system engineered to provide continuous, precision chilled water for heavy manufacturing and process cooling applications. Delivering approximately 17.5 kW of cooling capacity, this unit is built around an advanced V-Type air-cooled condenser configuration that maximizes heat exchange surface area while maintaining an ultra-compact footprint on your shop floor.
-
-At the core of the system is an energy-conserving hermetic scroll compressor celebrated for its smooth operation, low acoustic levels, and exceptional coefficient of performance (COP). Process fluid is circulated through an integrated, food-grade SS304 stainless steel buffer tank encased in 50mm high-density polyurethane (PUF) insulation. This industrial insulation virtually eliminates standby thermal loss and prevents external cabinet sweating even in humid monsoon environments.
-
-Designed specifically for continuous 24/7 industrial duty, the unit is protected by an intelligent microprocessor PID controller that maintains stable water temperatures within ±1°C of your target setpoint. Comprehensive safety interlocking—including high/low refrigerant pressure switches, compressor thermal overload relays, anti-freeze thermostat protection, and reverse-phase sequence monitoring—safeguards the equipment from electrical surges and process line interruptions.`,
-    features: [
-      "High Efficiency V-Type Copper-Aluminium Condenser",
-      "Industrial Hermetic Scroll Compressor with Vibration Dampening",
-      "Heavy-Duty SS304 Insulated Internal Water Tank (50mm PUF)",
-      "Digital Microprocessor PID Temperature Controller (±1°C Accuracy)",
-      "High-Head Centrifugal Stainless Steel Circulation Pump",
-      "Comprehensive Safety: HP/LP Switches, Overload Relay & Anti-Freeze Cut-Off",
-      "Corrosion-Resistant Powder Coated Mild Steel Outer Cabinet"
-    ],
-    applications: [
-      "Plastic Injection & Blow Moulding",
-      "CNC & High-Power Laser Cutting",
-      "Pharmaceutical & Chemical Batch Cooling",
-      "Printing & Lamination Machinery",
-      "Die Casting & Induction Furnaces"
-    ],
-    tempRange: "5°C to 25°C",
-    capacity: "5 TR",
-    tankCapacity: "200 Ltr SS304",
-    image: Img5TR_2,
-    images: [Img5TR_2, Img5TR_3, Img5TR_4]
-  },
-  {
-    id: 2,
-    name: "7.5 TR Air Cooled Water Chiller",
-    category: "Air Cooled",
-    shortDescription: "Heavy-duty 7.5 TR air-cooled industrial chiller featuring dual axial cooling fans, high-torque scroll compressor, and multi-tier protection for high-heat manufacturing lines.",
-    description: `The 7.5 TR Air Cooled Water Chiller delivers approximately 26.3 kW of nominal cooling capacity, engineered specifically for medium-to-heavy industrial facilities generating high thermal loads. Operating as a completely self-contained air-cooled packaged system, it dissipates heat directly into ambient air, eliminating the recurring maintenance, scale accumulation, water consumption, and chemical treatment costs associated with external cooling towers.
-
-The refrigeration circuit is driven by a high-torque industrial scroll compressor engineered for continuous high-ambient performance. Dual high-velocity axial fans equipped with aerodynamically profiled sickle blades draw massive volumes of ambient air across deep-row copper-tube, slit-aluminium-fin condenser coils. This robust heat exchange geometry ensures rapid heat rejection without high-pressure tripping even during scorching summer heatwaves reaching up to 48°C.
-
-Chilled process fluid is stored in a heavy-gauge SS304 stainless steel reservoir paired with high-efficiency submerged evaporator coils for instant thermal pull-down. The centralized digital console provides real-time LED temperature readouts, parameter adjustment, and automated error code diagnostics. Built-in protection routines—including anti-short cycling delay timers, crankcase heaters, phase failure preventers, and dual pressure gauges—ensure long-term operational peace of mind across rugged industrial shop floors.`,
-    features: [
-      "High-Torque Industrial Scroll Compressor with Internal Thermal Overload",
-      "Twin Aerodynamic High-CFM Condenser Exhaust Fans",
-      "SS304 Grade Heavy-Gauge Insulated Water Reservoir",
-      "Digital Microcomputer Control Panel with Auto Error Diagnostics",
-      "Submerged High-Efficiency Evaporator Coils for Rapid Heat Transfer",
-      "Multi-Tier Safety Suite: Anti-Short Cycle, HP/LP Cut-Offs & Phase Interlock",
-      "Rigid Powder-Coated Industrial Enclosure with Eye-Bolts for Safe Lifting"
-    ],
-    applications: [
-      "Multi-Cavity Plastic Injection & Extrusion Lines",
-      "Metal Anodizing & Electroplating Tanks",
-      "Laser Welding & Plasma Cutting Equipment",
-      "Dairy, Brewery & Commercial Beverage Processing",
-      "Rubber Vulcanizing Presses & Processing Mills"
-    ],
-    tempRange: "5°C to 25°C",
-    capacity: "7.5 TR",
-    tankCapacity: "250 Ltr SS304",
-    image: Img7_5TR,
-    images: [Img7_5TR, Img7_5TR_3, Img7_5TR_4]
-  },
-  {
-    id: 3,
-    name: "2 TR Air Cooled Water Chiller",
-    category: "Air Cooled",
-    shortDescription: "Ultra-compact 2 TR air-cooled chiller designed for point-of-use machinery cooling, laboratory instrumentation, and space-constrained industrial setups.",
-    description: `The 2 TR Air Cooled Water Chiller is an ultra-compact, modular process cooling unit developed for machine-side point-of-use installation. Generating approximately 7 kW of nominal cooling duty, it is the ideal thermal management solution for standalone machinery, analytical testing laboratories, and manufacturing spaces where running extensive central chilled water distribution loops is unfeasible.
-
-Despite its compact footprint, this chiller integrates genuine industrial-grade componentry. An energy-efficient hermetic compressor delivers rapid chilling cycles with minimal power consumption and low starting current. Chilled water is maintained inside an integrated, sanitary SS304 stainless steel storage reservoir insulated with thick closed-cell insulation to prevent ambient thermal loss and external cabinet condensation. A high-efficiency built-in monoblock pump ensures consistent, pulsation-free coolant delivery directly into machinery water jackets.
-
-The front operating panel features an intuitive digital thermostat with dual LED displays showing both actual water temperature and programmed setpoint. The entire skid is factory assembled, charged with eco-friendly refrigerant, and rigorously leak- and load-tested prior to dispatch. Standard quick-connect plumbing connections and accessible removable service panels make routine filter maintenance and system setup fast and effortless.`,
-    features: [
-      "Ultra-Compact Modular Footprint with Easy Machine-Side Integration",
-      "Energy-Efficient Hermetic Compressor with Rapid Thermal Pull-Down",
-      "Built-in Stainless Steel SS304 Reservoir & Monoblock Circulation Pump",
-      "Digital Microprocessor Thermostat with Push-Button Setpoint Logic",
-      "Low-Noise Axial Fan Assembly for Quiet Factory or Lab Operation",
-      "Pre-Charged with Eco-Friendly Refrigerant for Instant Plug-and-Play Setup",
-      "Tool-Free Removable Service Panels for Quick Cleaning & Maintenance"
-    ],
-    applications: [
-      "CNC High-Speed Spindle & Wire EDM Machines",
-      "Medical & Laboratory Analytical Instruments",
-      "Fiber Laser Marking & Precision Engraving Systems",
-      "Pharmaceutical Blister Packaging & Sealing Machines",
-      "Bakery Dough Mixers & Craft Brewery Fermenters"
-    ],
-    tempRange: "5°C to 20°C",
-    capacity: "2 TR",
-    tankCapacity: "75 Ltr SS304",
-    image: Img2TR,
-    images: [Img2TR, Img2TR_2, Img2TR_3]
-  },
-  {
-    id: 9,
     name: "1.5 TR Process Chiller",
     category: "Air Cooled",
     shortDescription: "Compact 1.5 TR air-cooled process chiller featuring an integrated 50 Ltr SS304 insulated water tank, top vertical condenser exhaust, and dual microcomputer temperature controllers.",
@@ -185,103 +89,39 @@ The intuitive operator control fascia features dual digital microcomputer contro
     images: [Img1_5TR_Front, Img1_5TR_Side, Img1_5TR_Angle]
   },
   {
-    id: 4,
-    name: "10 TR Water Chiller (RO Water Cooling)",
-    category: "RO Water Cooling",
-    shortDescription: "High-capacity 10 TR dedicated RO water chilling plant engineered with dual refrigeration circuits and food-grade stainless steel fluid path for commercial bottling plants.",
-    description: `The 10 TR RO Water Chiller is a high-capacity industrial cooling plant engineered exclusively to handle high flow rates of purified Reverse Osmosis (RO) water in commercial water bottling, mineral water packaging, and food-grade beverage plants. Because membrane filtration generates treated water at elevated ambient temperatures, this specialized chilling plant drops high flow volumes down to chilled drinking temperatures (typically between 8°C and 15°C) prior to packaging or storage.
+    id: 2,
+    name: "2 TR Air Cooled Water Chiller",
+    category: "Air Cooled",
+    shortDescription: "Ultra-compact 2 TR air-cooled chiller designed for point-of-use machinery cooling, laboratory instrumentation, and space-constrained industrial setups.",
+    description: `The 2 TR Air Cooled Water Chiller is an ultra-compact, modular process cooling unit developed for machine-side point-of-use installation. Generating approximately 7 kW of nominal cooling duty, it is the ideal thermal management solution for standalone machinery, analytical testing laboratories, and manufacturing spaces where running extensive central chilled water distribution loops is unfeasible.
 
-Because purified demineralized RO water is naturally aggressive toward brass and standard carbon steels, all wetted components—including internal heat exchange coils, buffer tank, pump impellers, and distribution manifolds—are fabricated strictly from certified food-grade SS304/SS316 stainless steel. This sanitary fluid pathway prevents corrosion, metallic dissolution, and microbial adhesion, maintaining 100% compliant drinking water purity.
+Despite its compact footprint, this chiller integrates genuine industrial-grade componentry. An energy-efficient hermetic compressor delivers rapid chilling cycles with minimal power consumption and low starting current. Chilled water is maintained inside an integrated, sanitary SS304 stainless steel storage reservoir insulated with thick closed-cell insulation to prevent ambient thermal loss and external cabinet condensation. A high-efficiency built-in monoblock pump ensures consistent, pulsation-free coolant delivery directly into machinery water jackets.
 
-To ensure uninterrupted plant productivity, the system incorporates dual independent refrigeration circuits. This multi-compressor design enables intelligent 50% / 100% capacity step-control based on real-time water draw, saving substantial electrical power during lower production hours while providing built-in operational redundancy. An advanced electronic control panel features dry-run pump safety interlocks, water flow sensors, digital temperature displays, and automated high/low pressure trip alarms.`,
+The front operating panel features an intuitive digital thermostat with dual LED displays showing both actual water temperature and programmed setpoint. The entire skid is factory assembled, charged with eco-friendly refrigerant, and rigorously leak- and load-tested prior to dispatch. Standard quick-connect plumbing connections and accessible removable service panels make routine filter maintenance and system setup fast and effortless.`,
     features: [
-      "Dual Independent Refrigeration Circuits for 50%/100% Energy Load Staging",
-      "100% Sanitary Food-Grade SS304/SS316 Wetted Fluid Pathway",
-      "Heavy-Duty Submerged SS Cooling Coils for High-Volume Heat Transfer",
-      "Dry-Run Pump Interlock to Prevent Circulation Failure & Component Damage",
-      "Advanced Microcomputer Dashboard with Live Temperature Tracking",
-      "Twin High-Velocity Condenser Exhaust Fans for Intense Ambient Cooling",
-      "Oversized Water Piping Headers Accommodating High Continuous Flow Rates"
+      "Ultra-Compact Modular Footprint with Easy Machine-Side Integration",
+      "Energy-Efficient Hermetic Compressor with Rapid Thermal Pull-Down",
+      "Built-in Stainless Steel SS304 Reservoir & Monoblock Circulation Pump",
+      "Digital Microprocessor Thermostat with Push-Button Setpoint Logic",
+      "Low-Noise Axial Fan Assembly for Quiet Factory or Lab Operation",
+      "Pre-Charged with Eco-Friendly Refrigerant for Instant Plug-and-Play Setup",
+      "Tool-Free Removable Service Panels for Quick Cleaning & Maintenance"
     ],
     applications: [
-      "Commercial Packaged Drinking Water Bottling Plants",
-      "Mineral Water Processing & Cold-Filling Lines",
-      "Industrial Soft Drink, Juice & Syrup Blending Facilities",
-      "Pharmaceutical Pure Water & WFI Cooling Loops",
-      "Large-Scale Institutional & Campus Central Drinking Stations"
+      "CNC High-Speed Spindle & Wire EDM Machines",
+      "Medical & Laboratory Analytical Instruments",
+      "Fiber Laser Marking & Precision Engraving Systems",
+      "Pharmaceutical Blister Packaging & Sealing Machines",
+      "Bakery Dough Mixers & Craft Brewery Fermenters"
     ],
-    tempRange: "5°C to 25°C",
-    capacity: "10 TR",
-    tankCapacity: "500 Ltr SS304",
-    image: ImgOther,
-    images: [ImgOther, ImgOther_2]
+    tempRange: "5°C to 20°C",
+    capacity: "2 TR",
+    tankCapacity: "75 Ltr SS304",
+    image: Img2TR,
+    images: [Img2TR, Img2TR_2, Img2TR_3]
   },
   {
-    id: 5,
-    name: "3 TR Water Chiller (Outdoor Unit)",
-    category: "RO Water Cooling",
-    shortDescription: "All-weather 3 TR packaged outdoor chiller designed specifically for RO water cooling, featuring an acoustic weather-resistant enclosure and tropicalized condenser.",
-    description: `The 3 TR Outdoor RO Water Chiller is an all-weather packaged cooling unit engineered specifically for open-air installation on rooftops, service terraces, or external utility yards. By placing the chilling equipment outdoors, commercial and institutional facilities free up valuable indoor shop floor area, eliminate indoor warm air discharge, and maintain a quiet, noise-free indoor working environment.
-
-The unit is encased in a heavy-duty, IP-rated weatherproof cabinet made of galvanized mild steel treated with a multi-stage chemical wash and UV-resistant outdoor architectural powder coating. The condenser coil is protected by a blue-fin hydrophilic treatment that prevents fin corrosion from outdoor rain, dust, and coastal humidity. Low-noise axial condenser fan assemblies discharge hot exhaust air vertically upward, substantially mitigating perimeter noise.
-
-Internally, the chiller features a dedicated reverse osmosis water cooling circuit constructed with sanitary food-grade SS304 stainless steel piping and an insulated holding tank. Equipped with automated ambient temperature compensation, freeze protection, low water level cut-offs, and an outdoor weather-sealed electrical panel, this system delivers dependable, year-round cooling through intense summer heatwaves, heavy downpours, and dusty environments.`,
-    features: [
-      "All-Weather IP-Rated Outdoor Cabinet with UV-Resistant Powder Finish",
-      "Hydrophilic Blue-Fin Condenser Coating for Long-Term Weather Resistance",
-      "Low-Noise Vertical Discharge Axial Condenser Fan Assembly",
-      "Food-Grade SS304 Internal Water Reservoir & Pure Water Circulation Loop",
-      "Automatic Freeze Protection & Low Water Level Safety Interlocks",
-      "Weather-Sealed Outdoor Electrical Control Panel with Digital Readout",
-      "Frees Up Valuable Indoor Factory Floor Space & Eliminates Indoor Heat"
-    ],
-    applications: [
-      "Commercial & Institutional Rooftop RO Water Stations",
-      "School, College & University Campus Drinking Water Systems",
-      "Hospital & Healthcare Facility Pure Water Cooling",
-      "Corporate Office Buildings, Commercial Hubs & Cafeterias",
-      "Outdoor Packaged Commercial RO Purification Skids"
-    ],
-    tempRange: "5°C to 25°C",
-    capacity: "3 TR",
-    tankCapacity: "100 Ltr SS304",
-    image: Img3TR,
-    images: [Img3TR, Img3TR_2, Img3TR_3]
-  },
-  {
-    id: 6,
-    name: "7.5 TR Water Chiller",
-    category: "Water Cooled",
-    shortDescription: "High-efficiency water-cooled industrial chiller with shell-and-tube condenser, robust scroll compressor, and insulated SS tank for continuous high-load manufacturing.",
-    description: `The 7.5 TR Water Cooled Industrial Chiller offers maximum thermodynamic cooling efficiency for manufacturing facilities equipped with an industrial cooling tower system. By leveraging water-cooling instead of air-cooling for condenser heat rejection, this system achieves lower condensing temperatures, resulting in 25% to 35% lower electrical power consumption per ton of refrigeration compared to air-cooled models.
-
-At the core of the condenser circuit is a heavy-duty, cleanable shell-and-tube heat exchanger built with internally grooved, seamless copper tubes expanded into heavy carbon steel tube sheets. Removable cast-iron end-water heads allow mechanical cleaning, brushing, and descaling during annual maintenance without disturbing refrigerant piping. The cooling cycle is driven by a heavy-duty industrial scroll compressor featuring internal pressure bypass and smooth, vibration-free operation.
-
-The process side is equipped with a heavily insulated SS304 stainless steel buffer reservoir and a high-efficiency evaporator capable of withstanding heavy thermal shocks and wide load variations. A microcomputer control panel displays water inlet/outlet temperatures, digital operating states, and fault alarms. Integrated safety interlocks—including water flow switches, high/low refrigerant pressure switches, anti-freeze thermostats, and motor overload relays—protect the chiller around the clock.`,
-    features: [
-      "High-Efficiency Cleanable Shell-and-Tube Water-Cooled Condenser",
-      "Exceptional Thermodynamic Efficiency (25-35% Lower Power Draw vs Air-Cooled)",
-      "Industrial Heavy-Duty Scroll Compressor for 24/7 Continuous Duty",
-      "Heavy-Gauge SS304 Insulated Reservoir with High-Density PUF Insulation",
-      "Removable Condenser End-Heads for Easy Periodic Tube Descaling",
-      "Microprocessor Automation Panel with Precision Digital PID Logic",
-      "Comprehensive Multi-Stage Electrical & Mechanical Safety Interlocks"
-    ],
-    applications: [
-      "Heavy Plastic Injection, Blow Moulding & Extrusion Plants",
-      "Continuous Chemical Reactors & Jacketed Mixing Tanks",
-      "Metal Die-Casting & Aluminium Extrusion Cooling",
-      "Rubber Mixing Mills & Vulcanizing Hydraulic Presses",
-      "Centralized Industrial Chilled Water Distribution Networks"
-    ],
-    tempRange: "5°C to 25°C",
-    capacity: "7.5 TR",
-    tankCapacity: "250 Ltr SS304",
-    image: Img7_5TR_New_Front,
-    images: [Img7_5TR_New_Front, Img7_5TR_New_Side, Img7_5TR_New_Back]
-  },
-  {
-    id: 7,
+    id: 3,
     name: "2 TR Water Chiller (RO Water Cooling)",
     category: "RO Water Cooling",
     shortDescription: "Compact 2 TR dedicated RO drinking water chiller with sanitary SS304 cooling coils, automatic temperature thermostat, and plug-and-play plumbing connections.",
@@ -313,7 +153,71 @@ The refrigeration unit utilizes an energy-conserving hermetic compressor enginee
     images: [Img2TR_RO_Front, Img2TR_RO_Side, Img2TR_RO_OpSide, Img2TR_RO_Back]
   },
   {
-    id: 8,
+    id: 4,
+    name: "3 TR Water Chiller (Outdoor Unit)",
+    category: "RO Water Cooling",
+    shortDescription: "All-weather 3 TR packaged outdoor chiller designed specifically for RO water cooling, featuring an acoustic weather-resistant enclosure and tropicalized condenser.",
+    description: `The 3 TR Outdoor RO Water Chiller is an all-weather packaged cooling unit engineered specifically for open-air installation on rooftops, service terraces, or external utility yards. By placing the chilling equipment outdoors, commercial and institutional facilities free up valuable indoor shop floor area, eliminate indoor warm air discharge, and maintain a quiet, noise-free indoor working environment.
+
+The unit is encased in a heavy-duty, IP-rated weatherproof cabinet made of galvanized mild steel treated with a multi-stage chemical wash and UV-resistant outdoor architectural powder coating. The condenser coil is protected by a blue-fin hydrophilic treatment that prevents fin corrosion from outdoor rain, dust, and coastal humidity. Low-noise axial condenser fan assemblies discharge hot exhaust air vertically upward, substantially mitigating perimeter noise.
+
+Internally, the chiller features a dedicated reverse osmosis water cooling circuit constructed with sanitary food-grade SS304 stainless steel piping and an insulated holding tank. Equipped with automated ambient temperature compensation, freeze protection, low water level cut-offs, and an outdoor weather-sealed electrical panel, this system delivers dependable, year-round cooling through intense summer heatwaves, heavy downpours, and dusty environments.`,
+    features: [
+      "All-Weather IP-Rated Outdoor Cabinet with UV-Resistant Powder Finish",
+      "Hydrophilic Blue-Fin Condenser Coating for Long-Term Weather Resistance",
+      "Low-Noise Vertical Discharge Axial Condenser Fan Assembly",
+      "Food-Grade SS304 Internal Water Reservoir & Pure Water Circulation Loop",
+      "Automatic Freeze Protection & Low Water Level Safety Interlocks",
+      "Weather-Sealed Outdoor Electrical Control Panel with Digital Readout",
+      "Frees Up Valuable Indoor Factory Floor Space & Eliminates Indoor Heat"
+    ],
+    applications: [
+      "Commercial & Institutional Rooftop RO Water Stations",
+      "School, College & University Campus Drinking Water Systems",
+      "Hospital & Healthcare Facility Pure Water Cooling",
+      "Corporate Office Buildings, Commercial Hubs & Cafeterias",
+      "Outdoor Packaged Commercial RO Purification Skids"
+    ],
+    tempRange: "5°C to 25°C",
+    capacity: "3 TR",
+    tankCapacity: "100 Ltr SS304",
+    image: Img3TR,
+    images: [Img3TR, Img3TR_2, Img3TR_3]
+  },
+  {
+    id: 5,
+    name: "5 TR Air Cooled Water Chiller",
+    category: "Air Cooled",
+    shortDescription: "High-efficiency V-Type air-cooled chiller engineered with energy-saving scroll compressor, insulated SS304 tank, and microcomputer temperature control.",
+    description: `The 5 TR Air Cooled Water Chiller is a high-efficiency industrial refrigeration system engineered to provide continuous, precision chilled water for heavy manufacturing and process cooling applications. Delivering approximately 17.5 kW of cooling capacity, this unit is built around an advanced V-Type air-cooled condenser configuration that maximizes heat exchange surface area while maintaining an ultra-compact footprint on your shop floor.
+
+At the core of the system is an energy-conserving hermetic scroll compressor celebrated for its smooth operation, low acoustic levels, and exceptional coefficient of performance (COP). Process fluid is circulated through an integrated, food-grade SS304 stainless steel buffer tank encased in 50mm high-density polyurethane (PUF) insulation. This industrial insulation virtually eliminates standby thermal loss and prevents external cabinet sweating even in humid monsoon environments.
+
+Designed specifically for continuous 24/7 industrial duty, the unit is protected by an intelligent microprocessor PID controller that maintains stable water temperatures within ±1°C of your target setpoint. Comprehensive safety interlocking—including high/low refrigerant pressure switches, compressor thermal overload relays, anti-freeze thermostat protection, and reverse-phase sequence monitoring—safeguards the equipment from electrical surges and process line interruptions.`,
+    features: [
+      "High Efficiency V-Type Copper-Aluminium Condenser",
+      "Industrial Hermetic Scroll Compressor with Vibration Dampening",
+      "Heavy-Duty SS304 Insulated Internal Water Tank (50mm PUF)",
+      "Digital Microprocessor PID Temperature Controller (±1°C Accuracy)",
+      "High-Head Centrifugal Stainless Steel Circulation Pump",
+      "Comprehensive Safety: HP/LP Switches, Overload Relay & Anti-Freeze Cut-Off",
+      "Corrosion-Resistant Powder Coated Mild Steel Outer Cabinet"
+    ],
+    applications: [
+      "Plastic Injection & Blow Moulding",
+      "CNC & High-Power Laser Cutting",
+      "Pharmaceutical & Chemical Batch Cooling",
+      "Printing & Lamination Machinery",
+      "Die Casting & Induction Furnaces"
+    ],
+    tempRange: "5°C to 25°C",
+    capacity: "5 TR",
+    tankCapacity: "200 Ltr SS304",
+    image: Img5TR_2,
+    images: [Img5TR_2, Img5TR_3, Img5TR_4]
+  },
+  {
+    id: 6,
     name: "5 TR Water Chiller (RO Water Cooling)",
     category: "RO Water Cooling",
     shortDescription: "Heavy-duty 5 TR commercial RO water chiller featuring high-flow SS circulation piping, food-grade insulated reservoir, and continuous 24/7 cooling performance.",
@@ -343,6 +247,102 @@ Driven by a top-tier industrial scroll compressor and paired with high-efficienc
     tankCapacity: "200 Ltr SS304",
     image: Img5TR_RO_Front,
     images: [Img5TR_RO_Front, Img5TR_RO_Side, Img5TR_RO_Back]
+  },
+  {
+    id: 7,
+    name: "7.5 TR Air Cooled Water Chiller",
+    category: "Air Cooled",
+    shortDescription: "Heavy-duty 7.5 TR air-cooled industrial chiller featuring dual axial cooling fans, high-torque scroll compressor, and multi-tier protection for high-heat manufacturing lines.",
+    description: `The 7.5 TR Air Cooled Water Chiller delivers approximately 26.3 kW of nominal cooling capacity, engineered specifically for medium-to-heavy industrial facilities generating high thermal loads. Operating as a completely self-contained air-cooled packaged system, it dissipates heat directly into ambient air, eliminating the recurring maintenance, scale accumulation, water consumption, and chemical treatment costs associated with external cooling towers.
+
+The refrigeration circuit is driven by a high-torque industrial scroll compressor engineered for continuous high-ambient performance. Dual high-velocity axial fans equipped with aerodynamically profiled sickle blades draw massive volumes of ambient air across deep-row copper-tube, slit-aluminium-fin condenser coils. This robust heat exchange geometry ensures rapid heat rejection without high-pressure tripping even during scorching summer heatwaves reaching up to 48°C.
+
+Chilled process fluid is stored in a heavy-gauge SS304 stainless steel reservoir paired with high-efficiency submerged evaporator coils for instant thermal pull-down. The centralized digital console provides real-time LED temperature readouts, parameter adjustment, and automated error code diagnostics. Built-in protection routines—including anti-short cycling delay timers, crankcase heaters, phase failure preventers, and dual pressure gauges—ensure long-term operational peace of mind across rugged industrial shop floors.`,
+    features: [
+      "High-Torque Industrial Scroll Compressor with Internal Thermal Overload",
+      "Twin Aerodynamic High-CFM Condenser Exhaust Fans",
+      "SS304 Grade Heavy-Gauge Insulated Water Reservoir",
+      "Digital Microcomputer Control Panel with Auto Error Diagnostics",
+      "Submerged High-Efficiency Evaporator Coils for Rapid Heat Transfer",
+      "Multi-Tier Safety Suite: Anti-Short Cycle, HP/LP Cut-Offs & Phase Interlock",
+      "Rigid Powder-Coated Industrial Enclosure with Eye-Bolts for Safe Lifting"
+    ],
+    applications: [
+      "Multi-Cavity Plastic Injection & Extrusion Lines",
+      "Metal Anodizing & Electroplating Tanks",
+      "Laser Welding & Plasma Cutting Equipment",
+      "Dairy, Brewery & Commercial Beverage Processing",
+      "Rubber Vulcanizing Presses & Processing Mills"
+    ],
+    tempRange: "5°C to 25°C",
+    capacity: "7.5 TR",
+    tankCapacity: "250 Ltr SS304",
+    image: Img7_5TR,
+    images: [Img7_5TR, Img7_5TR_3, Img7_5TR_4]
+  },
+  {
+    id: 8,
+    name: "7.5 TR Water Chiller",
+    category: "Water Cooled",
+    shortDescription: "High-efficiency water-cooled industrial chiller with shell-and-tube condenser, robust scroll compressor, and insulated SS tank for continuous high-load manufacturing.",
+    description: `The 7.5 TR Water Cooled Industrial Chiller offers maximum thermodynamic cooling efficiency for manufacturing facilities equipped with an industrial cooling tower system. By leveraging water-cooling instead of air-cooling for condenser heat rejection, this system achieves lower condensing temperatures, resulting in 25% to 35% lower electrical power consumption per ton of refrigeration compared to air-cooled models.
+
+At the core of the condenser circuit is a heavy-duty, cleanable shell-and-tube heat exchanger built with internally grooved, seamless copper tubes expanded into heavy carbon steel tube sheets. Removable cast-iron end-water heads allow mechanical cleaning, brushing, and descaling during annual maintenance without disturbing refrigerant piping. The cooling cycle is driven by a heavy-duty industrial scroll compressor featuring internal pressure bypass and smooth, vibration-free operation.
+
+The process side is equipped with a heavily insulated SS304 stainless steel buffer reservoir and a high-efficiency evaporator capable of withstanding heavy thermal shocks and wide load variations. A microcomputer control panel displays water inlet/outlet temperatures, digital operating states, and fault alarms. Integrated safety interlocks—including water flow switches, high/low refrigerant pressure switches, anti-freeze thermostats, and motor overload relays—protect the chiller around the clock.`,
+    features: [
+      "High-Efficiency Cleanable Shell-and-Tube Water-Cooled Condenser",
+      "Exceptional Thermodynamic Efficiency (25-35% Lower Power Draw vs Air-Cooled)",
+      "Industrial Heavy-Duty Scroll Compressor for 24/7 Continuous Duty",
+      "Heavy-Gauge SS304 Insulated Reservoir with High-Density PUF Insulation",
+      "Removable Condenser End-Heads for Easy Periodic Tube Descaling",
+      "Microprocessor Automation Panel with Precision Digital PID Logic",
+      "Comprehensive Multi-Stage Electrical & Mechanical Safety Interlocks"
+    ],
+    applications: [
+      "Heavy Plastic Injection, Blow Moulding & Extrusion Plants",
+      "Continuous Chemical Reactors & Jacketed Mixing Tanks",
+      "Metal Die-Casting & Aluminium Extrusion Cooling",
+      "Rubber Mixing Mills & Vulcanizing Hydraulic Presses",
+      "Centralized Industrial Chilled Water Distribution Networks"
+    ],
+    tempRange: "5°C to 25°C",
+    capacity: "7.5 TR",
+    tankCapacity: "250 Ltr SS304",
+    image: Img7_5TR_New_Front,
+    images: [Img7_5TR_New_Front, Img7_5TR_New_Side, Img7_5TR_New_Back]
+  },
+  {
+    id: 9,
+    name: "10 TR Water Chiller (RO Water Cooling)",
+    category: "RO Water Cooling",
+    shortDescription: "High-capacity 10 TR dedicated RO water chilling plant engineered with dual refrigeration circuits and food-grade stainless steel fluid path for commercial bottling plants.",
+    description: `The 10 TR RO Water Chiller is a high-capacity industrial cooling plant engineered exclusively to handle high flow rates of purified Reverse Osmosis (RO) water in commercial water bottling, mineral water packaging, and food-grade beverage plants. Because membrane filtration generates treated water at elevated ambient temperatures, this specialized chilling plant drops high flow volumes down to chilled drinking temperatures (typically between 8°C and 15°C) prior to packaging or storage.
+
+Because purified demineralized RO water is naturally aggressive toward brass and standard carbon steels, all wetted components—including internal heat exchange coils, buffer tank, pump impellers, and distribution manifolds—are fabricated strictly from certified food-grade SS304/SS316 stainless steel. This sanitary fluid pathway prevents corrosion, metallic dissolution, and microbial adhesion, maintaining 100% compliant drinking water purity.
+
+To ensure uninterrupted plant productivity, the system incorporates dual independent refrigeration circuits. This multi-compressor design enables intelligent 50% / 100% capacity step-control based on real-time water draw, saving substantial electrical power during lower production hours while providing built-in operational redundancy. An advanced electronic control panel features dry-run pump safety interlocks, water flow sensors, digital temperature displays, and automated high/low pressure trip alarms.`,
+    features: [
+      "Dual Independent Refrigeration Circuits for 50%/100% Energy Load Staging",
+      "100% Sanitary Food-Grade SS304/SS316 Wetted Fluid Pathway",
+      "Heavy-Duty Submerged SS Cooling Coils for High-Volume Heat Transfer",
+      "Dry-Run Pump Interlock to Prevent Circulation Failure & Component Damage",
+      "Advanced Microcomputer Dashboard with Live Temperature Tracking",
+      "Twin High-Velocity Condenser Exhaust Fans for Intense Ambient Cooling",
+      "Oversized Water Piping Headers Accommodating High Continuous Flow Rates"
+    ],
+    applications: [
+      "Commercial Packaged Drinking Water Bottling Plants",
+      "Mineral Water Processing & Cold-Filling Lines",
+      "Industrial Soft Drink, Juice & Syrup Blending Facilities",
+      "Pharmaceutical Pure Water & WFI Cooling Loops",
+      "Large-Scale Institutional & Campus Central Drinking Stations"
+    ],
+    tempRange: "5°C to 25°C",
+    capacity: "10 TR",
+    tankCapacity: "500 Ltr SS304",
+    image: ImgOther,
+    images: [ImgOther, ImgOther_2]
   },
   {
     id: 10,

@@ -1,9 +1,50 @@
 import React from 'react';
-import { User, Activity, Coffee, Box, Beaker, Zap, Cog, Building, ArrowRight } from 'lucide-react';
+import { User, Activity, Coffee, Box, Beaker, Zap, Cog, Building, ArrowRight, Award } from 'lucide-react';
 import { openQuoteModal } from '../utils/openQuoteModal';
 import './About.css';
 
 import ImgAbout2 from '../assets/10 tr water chiller for Ro water cooling Front.jpeg';
+import Member1 from '../assets/team/member-1.jpg';
+import Member2 from '../assets/team/member-2.jpg';
+import Member3 from '../assets/team/member-3.jpg';
+import Member4 from '../assets/team/member-4.jpg';
+import Member5 from '../assets/team/member-5.jpg';
+
+// =========================================================================
+// TEAM SHOWCASE (DUMMY PROFILES)
+// =========================================================================
+const teamMembers = [
+  {
+    id: 1,
+    name: 'John Doe',
+    experience: '12+ Years Exp.',
+    image: Member1
+  },
+  {
+    id: 2,
+    name: 'Sarah Jenkins',
+    experience: '10+ Years Exp.',
+    image: Member2
+  },
+  {
+    id: 3,
+    name: 'David Miller',
+    experience: '15+ Years Exp.',
+    image: Member3
+  },
+  {
+    id: 4,
+    name: 'Emily Davis',
+    experience: '8+ Years Exp.',
+    image: Member4
+  },
+  {
+    id: 5,
+    name: 'Michael Brown',
+    experience: '7+ Years Exp.',
+    image: Member5
+  }
+];
 
 export default function About() {
   return (
@@ -96,6 +137,36 @@ export default function About() {
           </div>
         </div>
       </div>
+
+      {/* Employee / Team Showcase Section */}
+      <section className="section team-section">
+        <div className="container">
+          <div className="section-header center text-center">
+            <span className="section-eyebrow">OUR WORKFORCE</span>
+            <h2 className="section-title">Meet Our Dedicated Team</h2>
+            <p className="section-subtitle mt-2">
+              The skilled engineers and specialists behind every precision-built Mahaveer chiller
+            </p>
+          </div>
+
+          <div className="team-grid">
+            {teamMembers.map((member) => (
+              <div key={member.id} className="team-card">
+                <div className="team-card-top-stripe"></div>
+                <div className="team-card-content">
+                  <div className="team-avatar-container">
+                    <img src={member.image} alt={member.name} className="team-avatar-img" />
+                  </div>
+                  <h3 className="team-member-name">{member.name}</h3>
+                  <span className="team-exp-badge">
+                    <Award size={14} /> {member.experience}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Closing Call to Action */}
       <section className="section cta-section reveal">
