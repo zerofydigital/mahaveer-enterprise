@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
 import { openQuoteModal } from '../utils/openQuoteModal';
+import logoEmblem from '../assets/logo-emblem.png';
 import './Header.css';
 
 export default function Header() {
@@ -26,8 +27,12 @@ export default function Header() {
       
       <div className="header-main">
         <div className="container header-main-content">
-          <Link to="/" className="logo">
-            <span className="logo-text-primary">MAHAVEER ENTERPRISE</span>
+          <Link to="/" className="logo" aria-label="Mahaveer Enterprise Home">
+            <img src={logoEmblem} alt="Mahaveer Enterprise Logo" className="header-logo-img" />
+            <div className="logo-text-group">
+              <span className="logo-title">MAHAVEER ENTERPRISE</span>
+              <span className="logo-tagline">Industrial Chiller Solutions</span>
+            </div>
           </Link>
           
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>

@@ -1,52 +1,21 @@
-import React from 'react';
-import { User, Activity, Coffee, Box, Beaker, Zap, Cog, Building, ArrowRight, Award } from 'lucide-react';
+import React, { useState } from 'react';
+import { 
+  User, Users, Activity, Coffee, Box, Beaker, Zap, Cog, Building, Building2, 
+  ArrowRight, ShieldCheck, Briefcase, Calendar, Award, MapPin, Copy, Check 
+} from 'lucide-react';
 import { openQuoteModal } from '../utils/openQuoteModal';
 import './About.css';
 
 import ImgAbout2 from '../assets/10 tr water chiller for Ro water cooling Front.jpeg';
-import Member1 from '../assets/team/member-1.jpg';
-import Member2 from '../assets/team/member-2.jpg';
-import Member3 from '../assets/team/member-3.jpg';
-import Member4 from '../assets/team/member-4.jpg';
-import Member5 from '../assets/team/member-5.jpg';
-
-// =========================================================================
-// TEAM SHOWCASE (DUMMY PROFILES)
-// =========================================================================
-const teamMembers = [
-  {
-    id: 1,
-    name: 'John Doe',
-    experience: '12+ Years Exp.',
-    image: Member1
-  },
-  {
-    id: 2,
-    name: 'Sarah Jenkins',
-    experience: '10+ Years Exp.',
-    image: Member2
-  },
-  {
-    id: 3,
-    name: 'David Miller',
-    experience: '15+ Years Exp.',
-    image: Member3
-  },
-  {
-    id: 4,
-    name: 'Emily Davis',
-    experience: '8+ Years Exp.',
-    image: Member4
-  },
-  {
-    id: 5,
-    name: 'Michael Brown',
-    experience: '7+ Years Exp.',
-    image: Member5
-  }
-];
 
 export default function About() {
+  const [copiedGst, setCopiedGst] = useState(false);
+
+  const handleCopyGst = () => {
+    navigator.clipboard.writeText('24AATPR8559A1Z9');
+    setCopiedGst(true);
+    setTimeout(() => setCopiedGst(false), 2000);
+  };
   return (
     <div className="about-page">
       <div className="page-header">
@@ -66,6 +35,22 @@ export default function About() {
             <p className="about-text">
               Our state-of-the-art manufacturing facility at VR Industrial Park is equipped with the latest technology and machinery, allowing us to engineer products that meet the highest international standards. We believe in continuous innovation and customer-centric design.
             </p>
+
+            <div className="about-team-highlight">
+              <div className="team-count-badge">
+                <div className="team-count-icon">
+                  <Users size={22} />
+                </div>
+                <div className="team-count-num">5+</div>
+                <div className="team-count-label">Core Team</div>
+              </div>
+              <div className="team-content">
+                <h4 className="team-title">Agile & Dedicated Workforce</h4>
+                <p className="team-text">
+                  Powering our continuous innovation is a tight-knit, passionate team of <strong>5+ dedicated industry professionals and technical craftsmen</strong>. Unlike impersonal mass assembly lines, our compact team brings deep hands-on expertise, personal accountability, and agile coordination to every stage—from custom thermal engineering and precise fabrication to rigorous performance testing—delivering bespoke cooling systems and responsive support you can always rely on.
+                </p>
+              </div>
+            </div>
             
             <div className="mission-vision mt-6">
               <div className="mv-box">
@@ -95,6 +80,123 @@ export default function About() {
           </div>
         </div>
       </div>
+
+      {/* Corporate Profile & Statutory Details */}
+      <section className="section statutory-section">
+        <div className="container">
+          <div className="section-header center">
+            <span className="section-eyebrow">COMPANY FACTSHEET</span>
+            <h2 className="section-title">Corporate & Statutory Details</h2>
+            <p className="section-subtitle mt-2">
+              Verified business credentials, legal registrations, and trade profile of Mahaveer Enterprise
+            </p>
+          </div>
+
+          <div className="statutory-card-container mt-10">
+            <div className="statutory-header-bar">
+              <div className="statutory-company-meta">
+                <div className="statutory-logo-badge">
+                  <Building2 size={24} />
+                </div>
+                <div>
+                  <h3 className="statutory-company-name">Mahaveer Enterprise</h3>
+                  <span className="statutory-sub">Manufacturer, Exporter & Supplier • Ahmedabad, India</span>
+                </div>
+              </div>
+              <div className="statutory-status-badge">
+                <ShieldCheck size={18} />
+                <span>Verified Business</span>
+              </div>
+            </div>
+
+            <div className="statutory-grid">
+              {/* GST Number */}
+              <div className="statutory-item statutory-item-highlight">
+                <div className="statutory-icon-wrap gst-icon-wrap">
+                  <ShieldCheck size={22} />
+                </div>
+                <div className="statutory-item-info">
+                  <div className="statutory-label-row">
+                    <span className="statutory-label">GST Number (GSTIN)</span>
+                    <span className="verified-pill">Active</span>
+                  </div>
+                  <div className="statutory-value-row">
+                    <span className="statutory-value gst-value">24AATPR8559A1Z9</span>
+                    <button 
+                      type="button" 
+                      onClick={handleCopyGst} 
+                      className={`gst-copy-btn ${copiedGst ? 'copied' : ''}`}
+                      title="Copy GST Number"
+                      aria-label="Copy GST Number"
+                    >
+                      {copiedGst ? <Check size={13} /> : <Copy size={13} />}
+                      <span>{copiedGst ? 'Copied' : 'Copy'}</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Nature of Business */}
+              <div className="statutory-item">
+                <div className="statutory-icon-wrap">
+                  <Briefcase size={22} />
+                </div>
+                <div className="statutory-item-info">
+                  <span className="statutory-label">Nature of Business</span>
+                  <span className="statutory-value">Exporter and Manufacturer & Supplier</span>
+                </div>
+              </div>
+
+              {/* Year of Establishment */}
+              <div className="statutory-item">
+                <div className="statutory-icon-wrap">
+                  <Calendar size={22} />
+                </div>
+                <div className="statutory-item-info">
+                  <span className="statutory-label">Year of Establishment</span>
+                  <span className="statutory-value">2000 <span className="statutory-meta-note">(20+ Years in Industry)</span></span>
+                </div>
+              </div>
+
+              {/* Standard Certification */}
+              <div className="statutory-item">
+                <div className="statutory-icon-wrap">
+                  <Award size={22} />
+                </div>
+                <div className="statutory-item-info">
+                  <div className="statutory-label-row">
+                    <span className="statutory-label">Standard Certification</span>
+                    <span className="cert-pill">Certified</span>
+                  </div>
+                  <span className="statutory-value">ISO 9001:2015</span>
+                </div>
+              </div>
+
+              {/* Total Staff */}
+              <div className="statutory-item">
+                <div className="statutory-icon-wrap">
+                  <Users size={22} />
+                </div>
+                <div className="statutory-item-info">
+                  <span className="statutory-label">No. of Staff</span>
+                  <span className="statutory-value">20 Employees & Technical Specialists</span>
+                </div>
+              </div>
+
+              {/* Location */}
+              <div className="statutory-item">
+                <div className="statutory-icon-wrap">
+                  <MapPin size={22} />
+                </div>
+                <div className="statutory-item-info">
+                  <span className="statutory-label">Operational Location</span>
+                  <span className="statutory-value">Ahmedabad, Gujarat (India)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Industries We Serve */}
       <div className="section section-bg">
@@ -138,35 +240,6 @@ export default function About() {
         </div>
       </div>
 
-      {/* Employee / Team Showcase Section */}
-      <section className="section team-section">
-        <div className="container">
-          <div className="section-header center text-center">
-            <span className="section-eyebrow">OUR WORKFORCE</span>
-            <h2 className="section-title">Meet Our Dedicated Team</h2>
-            <p className="section-subtitle mt-2">
-              The skilled engineers and specialists behind every precision-built Mahaveer chiller
-            </p>
-          </div>
-
-          <div className="team-grid">
-            {teamMembers.map((member) => (
-              <div key={member.id} className="team-card">
-                <div className="team-card-top-stripe"></div>
-                <div className="team-card-content">
-                  <div className="team-avatar-container">
-                    <img src={member.image} alt={member.name} className="team-avatar-img" />
-                  </div>
-                  <h3 className="team-member-name">{member.name}</h3>
-                  <span className="team-exp-badge">
-                    <Award size={14} /> {member.experience}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Closing Call to Action */}
       <section className="section cta-section reveal">

@@ -46,27 +46,54 @@
 }
 
 .logo {
-  font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 2.6vw, 2.25rem);
-  font-weight: 800;
-  letter-spacing: -0.5px;
   display: flex;
   align-items: center;
-  gap: 6px;
-  max-width: 100%;
-  white-space: nowrap;
-  line-height: 1.1;
+  gap: 10px;
   text-decoration: none;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .logo:hover {
-  opacity: 0.92;
-  transform: scale(1.01);
+  opacity: 0.95;
+  transform: translateY(-1px);
 }
 
-.logo-text-primary { 
-  color: var(--primary); 
+.header-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover .header-logo-img {
+  transform: scale(1.03);
+}
+
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.15;
+}
+
+.logo-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.logo-tagline {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-secondary);
+  white-space: nowrap;
 }
 
 .nav {
@@ -166,13 +193,23 @@
   z-index: 1001;
 }
 
+@media (max-width: 1024px) {
+  .logo-tagline {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .header-main-content {
     height: 72px;
   }
 
-  .logo {
-    font-size: clamp(1.35rem, 5vw, 1.75rem);
+  .header-logo-img {
+    height: 42px;
+  }
+
+  .logo-title {
+    font-size: 1.15rem;
   }
   
   .nav {
@@ -225,7 +262,13 @@
   .header-main-content {
     height: 66px;
   }
+  .header-logo-img {
+    height: 36px;
+  }
+  .logo-title {
+    font-size: 1rem;
+  }
   .logo {
-    font-size: clamp(1.2rem, 5.2vw, 1.45rem);
+    gap: 8px;
   }
 }
