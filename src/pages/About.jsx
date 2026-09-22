@@ -12,7 +12,7 @@ export default function About() {
   const [copiedGst, setCopiedGst] = useState(false);
 
   const handleCopyGst = () => {
-    navigator.clipboard.writeText('24AATPR8559A1Z9');
+    navigator.clipboard.writeText('24DKYPP4697F1Z9');
     setCopiedGst(true);
     setTimeout(() => setCopiedGst(false), 2000);
   };
@@ -33,7 +33,7 @@ export default function About() {
               Established in the year 2010, Mahaveer Enterprise has emerged as a leading manufacturer and supplier of a wide range of Industrial Chillers. Based in Ahmedabad, Gujarat, we have built a reputation for delivering high-quality, reliable, and energy-efficient cooling solutions to diverse industries across India.
             </p>
             <p className="about-text">
-              Our state-of-the-art manufacturing facility at VR Industrial Park is equipped with the latest technology and machinery, allowing us to engineer products that meet the highest international standards. We believe in continuous innovation and customer-centric design.
+              Our state-of-the-art manufacturing facility at 135 VR Industrial Park (Singarva Kathwada Road, Ahmedabad) is equipped with advanced testing systems and precision machinery, allowing us to engineer products that meet the highest industrial standards. We believe in continuous innovation, robust build quality, and customer-centric design.
             </p>
 
             <div className="about-team-highlight">
@@ -72,8 +72,8 @@ export default function About() {
                  <span className="founder-avatar-label">Leadership</span>
                </div>
                <div className="founder-info">
-                 <h3>Founder & CEO</h3>
-                 <p>Leading with a vision to revolutionize industrial cooling through innovation and unwavering commitment to quality since 2010.</p>
+                 <h3>Founder & Leadership</h3>
+                 <p>Leading with a vision to deliver robust, high-performance industrial cooling machinery with unwavering engineering integrity and dedicated customer support.</p>
                </div>
             </div>
             <img src={ImgAbout2} alt="Manufacturing" className="img-accent" style={{ zIndex: -1, opacity: 0.5, right: '-10%', left: 'auto', bottom: '-10%', border: 'none' }} />
@@ -88,7 +88,7 @@ export default function About() {
             <span className="section-eyebrow">COMPANY FACTSHEET</span>
             <h2 className="section-title">Corporate & Statutory Details</h2>
             <p className="section-subtitle mt-2">
-              Verified business credentials, legal registrations, and trade profile of Mahaveer Enterprise
+              Verified business credentials, official registration certificate details, and trade profile
             </p>
           </div>
 
@@ -100,12 +100,12 @@ export default function About() {
                 </div>
                 <div>
                   <h3 className="statutory-company-name">Mahaveer Enterprise</h3>
-                  <span className="statutory-sub">Manufacturer, Exporter & Supplier • Ahmedabad, India</span>
+                  <span className="statutory-sub">Manufacturer, Exporter & Supplier • Ahmedabad, Gujarat</span>
                 </div>
               </div>
               <div className="statutory-status-badge">
                 <ShieldCheck size={18} />
-                <span>Verified Business</span>
+                <span>GST Registered Business</span>
               </div>
             </div>
 
@@ -118,10 +118,10 @@ export default function About() {
                 <div className="statutory-item-info">
                   <div className="statutory-label-row">
                     <span className="statutory-label">GST Number (GSTIN)</span>
-                    <span className="verified-pill">Active</span>
+                    <span className="verified-pill">Active • Regular</span>
                   </div>
                   <div className="statutory-value-row">
-                    <span className="statutory-value gst-value">24AATPR8559A1Z9</span>
+                    <span className="statutory-value gst-value">24DKYPP4697F1Z9</span>
                     <button 
                       type="button" 
                       onClick={handleCopyGst} 
@@ -136,61 +136,61 @@ export default function About() {
                 </div>
               </div>
 
-              {/* Nature of Business */}
+              {/* Legal Name */}
+              <div className="statutory-item">
+                <div className="statutory-icon-wrap">
+                  <Building2 size={22} />
+                </div>
+                <div className="statutory-item-info">
+                  <span className="statutory-label">Legal Name of Business</span>
+                  <span className="statutory-value">KINJALBEN NIMESHBHAI PAREKH</span>
+                  <span className="statutory-meta-note">Trade Name: Mahaveer Enterprise</span>
+                </div>
+              </div>
+
+              {/* Constitution of Business */}
               <div className="statutory-item">
                 <div className="statutory-icon-wrap">
                   <Briefcase size={22} />
                 </div>
                 <div className="statutory-item-info">
-                  <span className="statutory-label">Nature of Business</span>
-                  <span className="statutory-value">Exporter and Manufacturer & Supplier</span>
+                  <span className="statutory-label">Constitution of Business</span>
+                  <span className="statutory-value">Proprietorship</span>
                 </div>
               </div>
 
-              {/* Year of Establishment */}
-              <div className="statutory-item">
-                <div className="statutory-icon-wrap">
-                  <Calendar size={22} />
-                </div>
-                <div className="statutory-item-info">
-                  <span className="statutory-label">Year of Establishment</span>
-                  <span className="statutory-value">2000 <span className="statutory-meta-note">(20+ Years in Industry)</span></span>
-                </div>
-              </div>
-
-              {/* Standard Certification */}
-              <div className="statutory-item">
-                <div className="statutory-icon-wrap">
-                  <Award size={22} />
-                </div>
-                <div className="statutory-item-info">
-                  <div className="statutory-label-row">
-                    <span className="statutory-label">Standard Certification</span>
-                    <span className="cert-pill">Certified</span>
-                  </div>
-                  <span className="statutory-value">ISO 9001:2015</span>
-                </div>
-              </div>
-
-              {/* Total Staff */}
-              <div className="statutory-item">
-                <div className="statutory-icon-wrap">
-                  <Users size={22} />
-                </div>
-                <div className="statutory-item-info">
-                  <span className="statutory-label">No. of Staff</span>
-                  <span className="statutory-value">20 Employees & Technical Specialists</span>
-                </div>
-              </div>
-
-              {/* Location */}
+              {/* Principal Place of Business */}
               <div className="statutory-item">
                 <div className="statutory-icon-wrap">
                   <MapPin size={22} />
                 </div>
                 <div className="statutory-item-info">
-                  <span className="statutory-label">Operational Location</span>
-                  <span className="statutory-value">Ahmedabad, Gujarat (India)</span>
+                  <span className="statutory-label">Principal Place of Business</span>
+                  <span className="statutory-value">
+                    135 VR Industrial Park, Singarva Kathwada Road, Singarva, Ahmedabad, Gujarat - 382430
+                  </span>
+                </div>
+              </div>
+
+              {/* Nature of Business */}
+              <div className="statutory-item">
+                <div className="statutory-icon-wrap">
+                  <Award size={22} />
+                </div>
+                <div className="statutory-item-info">
+                  <span className="statutory-label">Nature of Business</span>
+                  <span className="statutory-value">Manufacturer, Exporter & Supplier</span>
+                </div>
+              </div>
+
+              {/* Registration Type & Validity */}
+              <div className="statutory-item">
+                <div className="statutory-icon-wrap">
+                  <Calendar size={22} />
+                </div>
+                <div className="statutory-item-info">
+                  <span className="statutory-label">Registration Type & Status</span>
+                  <span className="statutory-value">Regular Taxpayer • Active</span>
                 </div>
               </div>
             </div>

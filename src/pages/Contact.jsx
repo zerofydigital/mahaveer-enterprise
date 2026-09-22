@@ -88,7 +88,7 @@ export default function Contact() {
 
     setErrors({});
     
-    fetch(`https://formsubmit.co/ajax/${import.meta.env.VITE_CONTACT_EMAIL}`, {
+    fetch(`https://formsubmit.co/ajax/${import.meta.env.VITE_CONTACT_EMAIL || 'mahaveerenterprise0067@gmail.com'}`, {
       method: "POST",
       headers: { 
           'Content-Type': 'application/json',
@@ -152,7 +152,7 @@ export default function Contact() {
                 <div className="contact-icon-box"><Mail size={24} /></div>
                 <div>
                   <h3>Email Address</h3>
-                  <p><a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL}`} style={{color: 'inherit', textDecoration: 'none'}}>{import.meta.env.VITE_CONTACT_EMAIL}</a></p>
+                  <p><a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL || 'mahaveerenterprise0067@gmail.com'}`} style={{color: 'inherit', textDecoration: 'none'}}>{import.meta.env.VITE_CONTACT_EMAIL || 'mahaveerenterprise0067@gmail.com'}</a></p>
                 </div>
               </div>
               
@@ -244,7 +244,6 @@ export default function Contact() {
       
       {/* Map Section */}
       <div className="map-section">
-        {/* Using a placeholder iframe for the map. For real implementation, replace with actual Google Maps embed link for the address */}
         <iframe 
           title="Mahaveer Enterprise Location"
           src="https://maps.google.com/maps?q=23.0489619,72.7021779&t=&z=15&ie=UTF8&iwloc=&output=embed" 

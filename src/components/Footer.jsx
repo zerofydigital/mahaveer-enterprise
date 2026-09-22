@@ -43,7 +43,7 @@ export default function Footer() {
             </li>
             <li>
               <Mail size={20} />
-              <span><a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL}`} style={{color: 'inherit', textDecoration: 'none'}}>{import.meta.env.VITE_CONTACT_EMAIL}</a></span>
+              <span><a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL || 'mahaveerenterprise0067@gmail.com'}`} style={{color: 'inherit', textDecoration: 'none'}}>{import.meta.env.VITE_CONTACT_EMAIL || 'mahaveerenterprise0067@gmail.com'}</a></span>
             </li>
           </ul>
         </div>

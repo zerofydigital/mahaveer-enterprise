@@ -103,7 +103,7 @@ export default function QuoteModal() {
 
     setErrors({});
     
-    fetch(`https://formsubmit.co/ajax/${import.meta.env.VITE_CONTACT_EMAIL}`, {
+    fetch(`https://formsubmit.co/ajax/${import.meta.env.VITE_CONTACT_EMAIL || 'mahaveerenterprise0067@gmail.com'}`, {
       method: "POST",
       headers: { 
           'Content-Type': 'application/json',
