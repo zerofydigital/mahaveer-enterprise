@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY } from '../utils/contactConfig';
 import './Contact.css';
 
 export default function Contact() {
@@ -88,7 +89,7 @@ export default function Contact() {
 
     setErrors({});
     
-    fetch(`https://formsubmit.co/ajax/${import.meta.env.VITE_CONTACT_EMAIL || 'mahaveerenterprise0067@gmail.com'}`, {
+    fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
       method: "POST",
       headers: { 
           'Content-Type': 'application/json',
@@ -108,7 +109,7 @@ export default function Contact() {
     })
     .catch(error => {
       console.error('Error submitting form:', error);
-      alert("Failed to submit form. Please try again.");
+      alert('Something went wrong. Please try again later.');
     });
   };
 
@@ -144,7 +145,7 @@ export default function Contact() {
                 <div className="contact-icon-box"><Phone size={24} /></div>
                 <div>
                   <h3>Phone Number</h3>
-                  <p>{import.meta.env.VITE_CONTACT_PHONE_DISPLAY}</p>
+                  <p>{CONTACT_PHONE_DISPLAY}</p>
                 </div>
               </div>
 
@@ -152,7 +153,7 @@ export default function Contact() {
                 <div className="contact-icon-box"><Mail size={24} /></div>
                 <div>
                   <h3>Email Address</h3>
-                  <p><a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL || 'mahaveerenterprise0067@gmail.com'}`} style={{color: 'inherit', textDecoration: 'none'}}>{import.meta.env.VITE_CONTACT_EMAIL || 'mahaveerenterprise0067@gmail.com'}</a></p>
+                  <p><a href={`mailto:${CONTACT_EMAIL}`} style={{color: 'inherit', textDecoration: 'none'}}>{CONTACT_EMAIL}</a></p>
                 </div>
               </div>
               

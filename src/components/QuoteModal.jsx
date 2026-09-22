@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, Send } from 'lucide-react';
+import { CONTACT_EMAIL } from '../utils/contactConfig';
 import './QuoteModal.css';
 
 export default function QuoteModal() {
@@ -103,7 +104,7 @@ export default function QuoteModal() {
 
     setErrors({});
     
-    fetch(`https://formsubmit.co/ajax/${import.meta.env.VITE_CONTACT_EMAIL || 'mahaveerenterprise0067@gmail.com'}`, {
+    fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
       method: "POST",
       headers: { 
           'Content-Type': 'application/json',

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, ChevronRight } from 'lucide-react';
+import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY } from '../utils/contactConfig';
 import './Footer.css';
 
 export default function Footer() {
@@ -39,11 +40,11 @@ export default function Footer() {
             </li>
             <li>
               <Phone size={20} />
-              <span>{import.meta.env.VITE_CONTACT_PHONE_DISPLAY}</span>
+              <span>{CONTACT_PHONE_DISPLAY}</span>
             </li>
             <li>
               <Mail size={20} />
-              <span><a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL || 'mahaveerenterprise0067@gmail.com'}`} style={{color: 'inherit', textDecoration: 'none'}}>{import.meta.env.VITE_CONTACT_EMAIL || 'mahaveerenterprise0067@gmail.com'}</a></span>
+              <span><a href={`mailto:${CONTACT_EMAIL}`} style={{color: 'inherit', textDecoration: 'none'}}>{CONTACT_EMAIL}</a></span>
             </li>
           </ul>
         </div>
