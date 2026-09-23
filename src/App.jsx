@@ -8,6 +8,7 @@ import Products from './pages/Products';
 import Contact from './pages/Contact';
 import FloatingActions from './components/FloatingActions';
 import QuoteModal from './components/QuoteModal';
+import { Analytics } from '@vercel/analytics/react';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -112,6 +113,7 @@ function App() {
       <Footer />
       <FloatingActions />
       <QuoteModal />
+      <Analytics />
     </Router>
   );
 }
